@@ -1,0 +1,117 @@
+$fontSizeText: 18px;
+$fontSizeTitle: 26px;
+$darkBlue: #080029;
+$animationSpeed: 0.3s;
+$activeColor: rgb(0, 153, 255);
+$padding: 3.5%;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+
+.layout {
+    padding: $padding;
+    height: 15000px;
+    .soc__media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        width: 92px;
+        position: fixed;
+        z-index: 100;
+        height: 71vh;
+        background-color: red;
+        border-right: 2px solid #f0f0f0;
+        border-left: 2px solid #f0f0f0;
+        border-bottom: 2px solid #f0f0f0;
+        overflow: hidden;
+        background-color: rgb(255, 255, 255);
+        &__links{
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+        }
+        &__closed{
+            margin: 9vh 0;
+            // margin-bottom: 100px;
+        }
+    }
+    .header {
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 25px;
+        padding: 0 $padding;
+        &__logo,
+        &__menu,
+        &__user,
+        &__nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__nav {
+            justify-content: space-between;
+            position: relative;
+            max-width: 1800px;
+            height: 90px;
+            margin: auto;
+            background: rgb(255, 255, 255);
+            border: 2px solid #f0f0f0;
+        }
+        &__logo {
+            position: absolute;
+            height: 90px;
+            width: 90px;
+            border-right: 2px solid #f0f0f0;
+        }
+        &__menu {
+            justify-content: flex-start;
+            width: 100%;
+            gap: 7.5%;
+            margin-left: calc(90px + 5.5%);
+            font-size: $fontSizeText;
+        }
+        &__list {
+            a {
+                color: $darkBlue;
+                font-family: "Rubik", sans-serif;
+                transition-duration: $animationSpeed;
+                display: block;
+            }
+            &:hover a {
+                color: $activeColor;
+            }
+        }
+        &__profile {
+            height: 52px;
+            width: 52px;
+            margin-right: 8.5%;
+            &:hover svg {
+                circle {
+                    transition-duration: $animationSpeed;
+                    fill: $activeColor;
+                }
+            }
+        }
+    }
+}
+
+.svg-icon-hover:hover svg {
+    path {
+        transition-duration: $animationSpeed;
+        fill: $activeColor;
+    }
+}

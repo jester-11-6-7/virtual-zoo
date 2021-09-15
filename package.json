@@ -1,0 +1,22 @@
+{
+  "name": "virtual-zoo",
+  "version": "0.0.1",
+  "description": "virtual zoo, you can see the animal at the zoo",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jester-11-6-7/virtual-zoo.git"
+  },
+  "keywords": [
+    "zoo"
+  ],
+  "author": "Elie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jester-11-6-7/virtual-zoo/issues"
+  },
+  "homepage": "https://github.com/jester-11-6-7/virtual-zoo#readme"
+}
