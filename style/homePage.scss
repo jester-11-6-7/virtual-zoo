@@ -3,7 +3,8 @@ $fontSizeTitle: 26px;
 $darkBlue: #080029;
 $animationSpeed: 0.3s;
 $activeColor: rgb(0, 153, 255);
-$padding: 3.5%;
+$paddingLayout: 3.5%;
+$headerWidth: 90px;
 
 * {
     padding: 0;
@@ -17,43 +18,19 @@ button {
     outline: none;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .layout {
-    padding: $padding;
+    width: 100%;
+    padding: $paddingLayout;
     height: 15000px;
-    .soc__media {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        width: 92px;
-        position: fixed;
-        z-index: 100;
-        height: 71vh;
-        background-color: red;
-        border-right: 2px solid #f0f0f0;
-        border-left: 2px solid #f0f0f0;
-        border-bottom: 2px solid #f0f0f0;
-        overflow: hidden;
-        background-color: rgb(255, 255, 255);
-        &__links{
-            display: flex;
-            flex-direction: column;
-            gap: 45px;
-        }
-        &__closed{
-            margin: 9vh 0;
-            // margin-bottom: 100px;
-        }
-    }
     .header {
         width: 100%;
         position: fixed;
-        z-index: 1000;
         left: 0;
         top: 25px;
-        padding: 0 $padding;
+        padding: 0 $paddingLayout;
         &__logo,
         &__menu,
         &__user,
@@ -62,20 +39,52 @@ button {
             justify-content: center;
             align-items: center;
         }
+        &__soc__media {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            width: 92px;
+            position: absolute;
+            z-index: -1;
+            height: 71vh;
+            // max-height: 780px;
+            background-color: red;
+            border-right: 2px solid #f0f0f0;
+            border-left: 2px solid #f0f0f0;
+            border-bottom: 2px solid #f0f0f0;
+            overflow: hidden;
+            background-color: rgb(255, 255, 255);
+            top: 0;
+            left: -2px;
+            .soc__media__links {
+                display: flex;
+                flex-direction: column;
+                gap: 45px;
+            }
+            .soc__media__closed {
+                margin: 9vh 0;
+                // margin-bottom: 100px;
+            }
+        }
         &__nav {
             justify-content: space-between;
             position: relative;
             max-width: 1800px;
-            height: 90px;
+            z-index: 1000;
+            height: $headerWidth;
             margin: auto;
             background: rgb(255, 255, 255);
             border: 2px solid #f0f0f0;
         }
         &__logo {
             position: absolute;
-            height: 90px;
-            width: 90px;
+            height: $headerWidth;
+            width: $headerWidth;
             border-right: 2px solid #f0f0f0;
+            border-top: 2px solid #f0f0f0;
+            border-bottom: 2px solid #f0f0f0;
+            background-color: rgb(255, 255, 255);
         }
         &__menu {
             justify-content: flex-start;
@@ -113,5 +122,57 @@ button {
     path {
         transition-duration: $animationSpeed;
         fill: $activeColor;
+    }
+}
+
+@media screen and(max-width: 1200px) {
+    $headerWidth: 70px;
+    .layout {
+        .header {
+            &__logo {
+                height: $headerWidth;
+                width: $headerWidth;
+            }
+            &__nav {
+                height: $headerWidth;
+            }
+            &__soc__media {
+                width: 72px;
+            }
+            &__profile {
+                height: 10vh;
+                width: 43px;
+                svg {
+                    height: 10vh;
+                    width: 43px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+    $headerWidth: 75px;
+    .layout {
+        .header {
+            &__logo {
+                height: $headerWidth;
+                width: $headerWidth;
+            }
+            &__nav {
+                height: $headerWidth;
+            }
+            &__soc__media {
+                width: 77px;
+            }
+            &__profile {
+                height: 10vh;
+                width: 43px;
+                svg {
+                    height: 10vh;
+                    width: 43px;
+                }
+            }
+        }
     }
 }
