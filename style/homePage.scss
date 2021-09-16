@@ -3,8 +3,13 @@ $fontSizeTitle: 26px;
 $darkBlue: #080029;
 $animationSpeed: 0.3s;
 $activeColor: rgb(0, 153, 255);
+$titleColor: #626262;
+
 $paddingLayout: 3.5%;
 $headerWidth: 90px;
+
+$Merriweather: "Merriweather", serif;
+$Rubik: "Rubik", sans-serif;
 
 * {
     padding: 0;
@@ -23,7 +28,6 @@ button {
 
 .layout {
     width: 100%;
-    padding: $paddingLayout;
     height: 15000px;
     .header {
         width: 100%;
@@ -47,13 +51,12 @@ button {
             width: 92px;
             position: absolute;
             z-index: -1;
-            height: 71vh;
-            // max-height: 780px;
-            background-color: red;
+            height: 60px;
             border-right: 2px solid #f0f0f0;
             border-left: 2px solid #f0f0f0;
             border-bottom: 2px solid #f0f0f0;
             overflow: hidden;
+            transition-duration: $animationSpeed;
             background-color: rgb(255, 255, 255);
             top: 0;
             left: -2px;
@@ -64,7 +67,10 @@ button {
             }
             .soc__media__closed {
                 margin: 9vh 0;
-                // margin-bottom: 100px;
+            }
+
+            &.open {
+                height: 90vh;
             }
         }
         &__nav {
@@ -96,12 +102,12 @@ button {
         &__list {
             a {
                 color: $darkBlue;
-                font-family: "Rubik", sans-serif;
+                font-family: $Rubik;
                 transition-duration: $animationSpeed;
                 display: block;
             }
             &:hover a {
-                color: $activeColor; 
+                color: $activeColor;
             }
         }
         &__profile {
@@ -116,6 +122,63 @@ button {
             }
         }
     }
+    .main {
+        width: 100%;
+        .wild-park {
+            &__layout {
+                max-width: 1432px;
+                margin: auto;
+                display: flex;
+                padding-top: 170px;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            &__box {
+                margin-bottom: 100px;
+            }
+            &__title {
+                color: $titleColor;
+                font-size: 22px;
+                font-family: $Rubik;
+                padding: 0 0 25px 0;
+            }
+            &__subtitle {
+                color: $darkBlue;
+                font-size: 84px;
+                font-family: $Merriweather;
+            }
+            &__btn:nth-of-type(1) {
+                .btn {
+                    background-color: $darkBlue;
+                    color: white;
+                    margin-right: 62px;
+                    margin-top: 60px;
+                }
+            }
+            &__btn:nth-of-type(2) {
+                .btn {
+                    border: 2px solid $darkBlue;
+                    background-color: white;
+                    color: $darkBlue;
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    border-radius: 5px;
+    border: 2px solid transparent;
+    padding: 20px 75px;
+    font-size: 18px;
+}
+
+.title {
+    color: $titleColor;
+    font-size: 22px;
+    font-family: $Rubik;
+    padding: 0 0 50px 0;
 }
 
 .svg-icon-hover:hover svg {
