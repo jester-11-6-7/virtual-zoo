@@ -2,8 +2,11 @@ $fontSizeText: 18px;
 $fontSizeTitle: 26px;
 $darkBlue: #080029;
 $animationSpeed: 0.3s;
+
 $activeColor: rgb(0, 153, 255);
 $titleColor: #626262;
+$colorText: #747474;
+$btnColor: #0F0049;
 
 $paddingLayout: 3.5%;
 $headerWidth: 90px;
@@ -132,10 +135,7 @@ button {
                 padding-top: 170px;
                 display: flex;
                 justify-content: space-between;
-                align-items: flex-end;
-            }
-            &__box {
-                margin-bottom: 100px;
+                align-items: center;
             }
             &__title {
                 color: $titleColor;
@@ -147,6 +147,21 @@ button {
                 color: $darkBlue;
                 font-size: 84px;
                 font-family: $Merriweather;
+                .dot {
+                    position: relative;
+                    z-index: -2;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: 13px;
+                        left: 6px;
+                        height: 18px;
+                        width: 18px;
+                        border-radius: 50%;
+                        background-color: red;
+                    }
+                }
             }
             &__btn:nth-of-type(1) {
                 .btn {
@@ -164,6 +179,26 @@ button {
                 }
             }
         }
+        .how-zoo-work {
+            &__layout {
+                padding: 110px 0;
+                max-width: 1432px;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 224px;
+            }
+            &__text{
+                margin: 40px 0 60px 0;
+            }
+            &__btn{
+                .btn{
+                    color: white;
+                    background-color: $btnColor;
+                }
+            }
+        }
     }
 }
 
@@ -172,6 +207,7 @@ button {
     border: 2px solid transparent;
     padding: 20px 75px;
     font-size: 18px;
+    font-family: $Rubik;
 }
 
 .title {
@@ -179,6 +215,21 @@ button {
     font-size: 22px;
     font-family: $Rubik;
     padding: 0 0 50px 0;
+}
+
+.subtitle{
+    color: $darkBlue;
+    font-family: $Merriweather;
+    font-size: 36px;
+    text-align: start;
+}
+
+.text{
+    font-size: 18px;
+    color: $colorText;
+    line-height: 154%;
+    font-family: Rubik;
+    line-height: 27.72px;
 }
 
 .svg-icon-hover:hover svg {
