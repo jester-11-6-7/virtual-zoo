@@ -16,12 +16,12 @@ button {
 
 .layout {
   width: 100%;
-  height: 15000px;
 }
 
 .layout .header {
   width: 100%;
   position: fixed;
+  z-index: 1000;
   left: 0;
   top: 25px;
   padding: 0 3.5%;
@@ -155,7 +155,6 @@ button {
   display: -ms-flexbox;
   display: flex;
   padding-top: 170px;
-  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -229,7 +228,128 @@ button {
 
 .layout .main .how-zoo-work__btn .btn {
   color: white;
-  background-color: #0F0049;
+  background-color: #0f0049;
+}
+
+.layout .main .famous-pets {
+  background-color: #d9e8ff;
+  padding: 100px 0;
+}
+
+.layout .main .famous-pets__layout {
+  max-width: 1432px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.layout .main .famous-pets__box {
+  max-width: 325px;
+}
+
+.layout .main .famous-pets__btn {
+  margin-top: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.layout .main .famous-pets__btn .btn-slider {
+  background-color: #181818;
+}
+
+.layout .main .famous-pets__slider {
+  width: 1064px;
+  overflow: hidden;
+}
+
+.layout .main .famous-pets__slider-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1800px;
+  gap: 40px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.layout .main .famous-pets__animal {
+  width: 328px;
+  height: 328px;
+  background-color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.layout .main .famous-pets__animal:hover {
+  background-size: 110%;
+}
+
+.layout .main .famous-pets__animal .animal-container {
+  width: 100%;
+  height: 100%;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.layout .main .famous-pets__animal .animal-container:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.layout .main .famous-pets__animal:nth-of-type(1) {
+  background-image: url("../assets/img/slider_red_panda.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(2) {
+  background-image: url("../assets/img/slider_penguin.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(3) {
+  background-image: url("../assets/img/slider_squirrel.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(4) {
+  background-image: url("");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(5) {
+  background-image: url("");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(6) {
+  background-image: url("../assets/img/slider_panda.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(7) {
+  background-image: url("../assets/img/slider_eagle.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(8) {
+  background-image: url("../assets/img/slider_gorilla.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(9) {
+  background-image: url("");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(10) {
+  background-image: url("");
 }
 
 .btn {
@@ -260,6 +380,21 @@ button {
   line-height: 154%;
   font-family: Rubik;
   line-height: 27.72px;
+}
+
+.btn-slider {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .svg-icon-hover:hover svg path {

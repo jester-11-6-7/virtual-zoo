@@ -6,7 +6,10 @@ $animationSpeed: 0.3s;
 $activeColor: rgb(0, 153, 255);
 $titleColor: #626262;
 $colorText: #747474;
-$btnColor: #0F0049;
+$btnColor: #0f0049;
+$btnSliderColorDark: #181818;
+$wightBlue: #d9e8ff;
+$blue: #0F0049;
 
 $paddingLayout: 3.5%;
 $headerWidth: 90px;
@@ -31,10 +34,10 @@ button {
 
 .layout {
     width: 100%;
-    height: 15000px;
     .header {
         width: 100%;
         position: fixed;
+        z-index: 1000;
         left: 0;
         top: 25px;
         padding: 0 $paddingLayout;
@@ -133,7 +136,6 @@ button {
                 margin: auto;
                 display: flex;
                 padding-top: 170px;
-                display: flex;
                 justify-content: space-between;
                 align-items: center;
             }
@@ -189,13 +191,99 @@ button {
                 align-items: center;
                 gap: 224px;
             }
-            &__text{
+            &__text {
                 margin: 40px 0 60px 0;
             }
-            &__btn{
-                .btn{
+            &__btn {
+                .btn {
                     color: white;
                     background-color: $btnColor;
+                }
+            }
+        }
+        .famous-pets {
+            background-color: $wightBlue;
+            padding: 100px 0;
+            &__layout {
+                max-width: 1432px;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__box {
+                max-width: 325px;
+            }
+            &__btn {
+                margin-top: 55px;
+                display: flex;
+                gap: 20px;
+                .btn-slider {
+                    background-color: $btnSliderColorDark;
+                }
+            }
+            &__slider {
+                width: 1064px;
+                overflow: hidden;
+            }
+            &__slider-bar {
+                display: flex;
+                flex-wrap: wrap;
+                width: 1800px;
+                gap: 40px;
+                transition-duration: 0.5s;
+            }
+            &__animal {
+                width: 328px;
+                height: 328px;
+                background-color: white;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                border-radius: 5px;
+                transition-duration: $animationSpeed;
+                overflow: hidden;
+                position: relative;
+                &:hover {
+                    background-size: 110%;
+                }
+                .animal-container {
+                    width: 100%;
+                    height: 100%;
+                    transition-duration: $animationSpeed;
+                    &:hover {
+                        background-color: rgba($color: #000000, $alpha: 0.3);
+                    }
+                }
+                &:nth-of-type(1) {
+                    background-image: url("../assets/img/slider_red_panda.png");
+                }
+                &:nth-of-type(2) {
+                    background-image: url("../assets/img/slider_penguin.png");
+                }
+                &:nth-of-type(3) {
+                    background-image: url("../assets/img/slider_squirrel.png");
+                }
+                &:nth-of-type(4) {
+                    background-image: url("");
+                }
+                &:nth-of-type(5) {
+                    background-image: url("");
+                }
+                &:nth-of-type(6) {
+                    background-image: url("../assets/img/slider_panda.png");
+                }
+                &:nth-of-type(7) {
+                    background-image: url("../assets/img/slider_eagle.png");
+                }
+                &:nth-of-type(8) {
+                    background-image: url("../assets/img/slider_gorilla.png");
+                }
+                &:nth-of-type(9) {
+                    background-image: url("");
+                }
+                &:nth-of-type(10) {
+                    background-image: url("");
                 }
             }
         }
@@ -217,19 +305,28 @@ button {
     padding: 0 0 50px 0;
 }
 
-.subtitle{
+.subtitle {
     color: $darkBlue;
     font-family: $Merriweather;
     font-size: 36px;
     text-align: start;
 }
 
-.text{
+.text {
     font-size: 18px;
     color: $colorText;
     line-height: 154%;
     font-family: Rubik;
     line-height: 27.72px;
+}
+
+.btn-slider {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .svg-icon-hover:hover svg {
