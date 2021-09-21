@@ -12,10 +12,10 @@ $wightBlue: #d9e8ff;
 $blue: #0f0049;
 $footerBgColor: #0b0b0b;
 $footerTextColor: #bcbcbc;
-$footerTitleColor: #FCFCFC;
+$footerTitleColor: #fcfcfc;
 
-$paddingLayout: 3.5%;
-$headerWidth: 90px;
+$paddingLayout: 20px;
+$headerWidth: 88px;
 
 $Merriweather: "Merriweather", serif;
 $Rubik: "Rubik", sans-serif;
@@ -23,107 +23,58 @@ $Rubik: "Rubik", sans-serif;
 .layout {
     width: 100%;
     .header {
-        width: 100%;
-        position: fixed;
-        left: 0;
-        top: 25px;
-        padding: 0 $paddingLayout;
+        position: absolute;
         z-index: 1000;
-        &__logo,
-        &__menu,
-        &__user,
+        width: 100%;
         &__nav {
+            height: $headerWidth;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            background-color: white;
+            padding: 0 $paddingLayout;
+            border-bottom: 2px solid #f0f0f0;
         }
-        &__soc__media {
+        &__logo {
+            svg {
+                width: 49px;
+                height: 38px;
+            }
+        }
+        &__menu {
+            width: 100%;
+            height: 100vh;
+            padding: 88px 0 105px 0;
+            position: absolute;
+            top: -100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-end;
-            width: 92px;
-            position: absolute;
-            z-index: -1;
-            height: 60px;
-            border-right: 2px solid #f0f0f0;
-            border-left: 2px solid #f0f0f0;
-            border-bottom: 2px solid #f0f0f0;
-            overflow: hidden;
-            transition-duration: $animationSpeed;
-            background-color: rgb(255, 255, 255);
-            top: 0;
-            left: -2px;
-            .soc__media__links {
-                display: flex;
-                flex-direction: column;
-                gap: 45px;
-            }
-            .soc__media__closed {
-                margin: 9vh 0;
-            }
-
-            &.open {
-                height: 90vh;
-            }
-        }
-        &__nav {
             justify-content: space-between;
-            position: relative;
-            max-width: 1800px;
-            z-index: 1000;
-            height: $headerWidth;
-            margin: auto;
-            background: rgb(255, 255, 255);
-            border: 2px solid #f0f0f0;
-        }
-        &__logo {
-            position: absolute;
-            height: $headerWidth;
-            width: $headerWidth;
-            border-right: 2px solid #f0f0f0;
-            border-top: 2px solid #f0f0f0;
-            border-bottom: 2px solid #f0f0f0;
-            background-color: rgb(255, 255, 255);
-        }
-        &__menu {
-            justify-content: flex-start;
-            width: 100%;
-            gap: 7.5%;
-            margin-left: calc(90px + 5.5%);
-            font-size: $fontSizeText;
-        }
-        &__list {
-            a {
-                color: $darkBlue;
-                font-family: $Rubik;
-                transition-duration: $animationSpeed;
-                display: block;
-            }
-            &:hover a {
-                color: $activeColor;
+            left: 0;
+            z-index: -1;
+            background-color: white;
+            font-size: 24px;
+            font-family: $Rubik;
+            font-weight: 500;
+            transition-duration: 0.5s;
+            &.show {
+                top: 0;
             }
         }
-        &__profile {
-            height: 52px;
-            width: 52px;
-            margin-right: 8.5%;
-            &:hover svg {
-                circle {
-                    transition-duration: $animationSpeed;
-                    fill: $activeColor;
-                }
-            }
+        &__soc__media {
+            display: none;
         }
     }
     .main {
         width: 100%;
+        padding: 0 $paddingLayout;
         .error {
             padding-top: 0px;
             &__layout {
-                padding-top: 253px;
+                padding-top: 200px;
                 max-width: 900px;
-                height: 1301px;
+                height: 997px;
                 margin: auto;
                 display: flex;
                 flex-direction: column;
@@ -132,7 +83,6 @@ $Rubik: "Rubik", sans-serif;
             }
             &__title {
                 position: relative;
-                // margin-bottom: 30px;
                 &::before {
                     content: "404";
                     position: absolute;
@@ -141,31 +91,33 @@ $Rubik: "Rubik", sans-serif;
                     left: 50%;
                     color: $wightBlue;
                     transform: translateX(-50%);
-                    font-size: 144px;
+                    font-size: 96px;
                 }
             }
             &__subtitle {
-                // margin-bottom: 50px;
                 .subtitle {
                     line-height: 154%;
                     display: flex;
                     justify-content: center;
-                    font-size: 24px;
+                    font-size: 16px;
                     font-family: $Rubik;
                 }
             }
             &__btn {
-                // margin-bottom: 80px;
                 .btn {
                     color: white;
                     background-color: $blue;
                 }
             }
-            // &__vidio{
-            //     // margin-bottom: 60px;
-            // }
+            &__vidio {
+                iframe {
+                    width: 600px;
+                    height: 338px;
+                    border: none;
+                }
+            }
             &__text {
-                margin-bottom: 80px;
+                margin-bottom: 20px;
                 .text {
                     display: flex;
                     justify-content: center;
@@ -174,11 +126,10 @@ $Rubik: "Rubik", sans-serif;
         }
     }
     .footer {
-        padding: $paddingLayout;
+        padding: 0 $paddingLayout;
         width: 100%;
         background-color: $footerBgColor;
         &__box {
-            max-width: 1432px;
             margin: auto;
             color: white;
             font-family: $Rubik;
@@ -186,45 +137,57 @@ $Rubik: "Rubik", sans-serif;
             flex-direction: column;
             justify-content: flex-end;
             color: $footerTextColor;
+            max-width: 577px;
         }
         &__layout {
             display: flex;
             flex-wrap: wrap;
+            margin: auto;
             justify-content: space-between;
-            align-items: center;
-            padding: 100px 0 150px 0;
+            gap: 40px;
+            padding: 80px 0 60px 0;
             a {
                 color: $footerTextColor;
                 transition-duration: $animationSpeed;
-                &:hover{
+                &:hover {
                     color: $activeColor;
                 }
             }
         }
-        &__title{
+        &__title {
             color: $footerTitleColor;
             font-weight: 400;
             font-size: 22px;
+            letter-spacing: 0.115em;
         }
-        &__icons{
+        &__icons {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-self: stretch;
+            gap: 115px;
+            width: 100%;
+            svg{
+                width: 95px;
+                height: 74px;
+            }
         }
-        &__collaboration{
+        &__collaboration {
             display: flex;
             align-items: center;
             gap: 24px;
+            .yem-digital{
+                width: 93px;
+            }
+            .rs-school{
+                width: 102px;
+            }
         }
         &__navigation {
             display: flex;
             flex-direction: column;
             gap: 30px;
             font-weight: 400;
-            margin-right: 160px;
             .navigation__link {
                 &:nth-of-type(1) {
+                    letter-spacing: 0.115em;
                     font-size: 22px;
                     margin-bottom: 10px;
                     font-weight: 400;
@@ -232,32 +195,36 @@ $Rubik: "Rubik", sans-serif;
                 }
             }
         }
-        &__volunteer{
+        &__supp{
+            margin-right: 13px;
+        }
+        &__volunteer {
             max-width: 339px;
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 30px;
         }
-        &__btn{
-            .btn{
+        &__btn {
+            .btn {
                 border-color: $footerTitleColor;
                 color: $footerTitleColor;
                 padding: 20px 0;
-                width: 100%;
+                width: 318px;
             }
         }
-        &__soc-media{
-            margin-top: 85px;
+        &__soc-media {
+            margin-top: 50px;
             display: flex;
-            gap: 45px;
-            font-size: 22px;
+            font-size: 18px;
+            gap: 65px;
         }
         &__copyright {
-            padding: 50px 0 0 0;
+            padding: 20px 0;
             display: flex;
             justify-content: space-between;
             border-top: 1px solid #747474;
             font-weight: 400;
+            font-size: 14px;
         }
     }
 }
@@ -265,8 +232,8 @@ $Rubik: "Rubik", sans-serif;
 .btn {
     border-radius: 5px;
     border: 2px solid transparent;
-    padding: 20px 75px;
-    font-size: 18px;
+    padding: 16px 60px;
+    font-size: 16px;
     font-family: $Rubik;
 }
 
@@ -280,12 +247,12 @@ $Rubik: "Rubik", sans-serif;
 .subtitle {
     color: $darkBlue;
     font-family: $Merriweather;
-    font-size: 36px;
+    font-size: 26px;
     text-align: start;
 }
 
 .text {
-    font-size: 18px;
+    font-size: 14px;
     color: $colorText;
     line-height: 154%;
     font-family: Rubik;
