@@ -23,7 +23,7 @@ $Rubik: "Rubik", sans-serif;
 .layout {
     width: 100%;
     .header {
-        position: absolute;
+        position: fixed;
         z-index: 1000;
         width: 100%;
         &__nav {
@@ -33,7 +33,7 @@ $Rubik: "Rubik", sans-serif;
             align-items: center;
             background-color: white;
             padding: 0 $paddingLayout;
-            border-bottom: 2px solid #f0f0f0;
+            // border-bottom: 2px solid #f0f0f0;
         }
         &__logo {
             svg {
@@ -43,14 +43,16 @@ $Rubik: "Rubik", sans-serif;
         }
         &__menu {
             width: 100%;
-            height: 100vh;
-            padding: 88px 0 105px 0;
+            height: 90px;
+            overflow: hidden;
+            border-bottom: 2px solid #f0f0f0;
+            top: 0;
+            padding: 55px 0 0 0;
             position: absolute;
-            top: -100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-around;
             left: 0;
             z-index: -1;
             background-color: white;
@@ -58,8 +60,9 @@ $Rubik: "Rubik", sans-serif;
             font-family: $Rubik;
             font-weight: 500;
             transition-duration: 0.5s;
+            transition-timing-function: ease;
             &.show {
-                top: 0;
+                height: 100vh;
             }
         }
         &__soc__media {
@@ -254,10 +257,45 @@ $Rubik: "Rubik", sans-serif;
     line-height: 27.72px;
 }
 
-.title{
+.title {
     font-family: $Merriweather;
     font-size: 26px;
     color: $darkBlue;
+}
+
+.profile {
+    display: none;
+}
+
+.burger-menu {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    rect {
+        transition-duration: 0.5s;
+    }
+    svg {
+        overflow: visible;
+        width: 37px;
+        outline: none;
+    }
+    &.closed {
+        rect:nth-of-type(1) {
+            width: 35;
+            transform-origin: top left;
+            transform: translateY(-3.5px) translateX(1px) rotate(45deg);
+        }
+        rect:nth-of-type(3) {
+            width: 35;
+            transform: translateY(3.5px) rotate(-45deg);
+            transform-origin: left bottom;
+        }
+        rect:nth-of-type(2) {
+            width: 0px;
+        }
+    }
 }
 
 @media screen and(max-width: 639px) {
@@ -269,13 +307,15 @@ $Rubik: "Rubik", sans-serif;
             &__nav {
                 height: $headerWidth;
                 padding: 0 $paddingLayout;
-                border-bottom: 2px solid #f0f0f0;
             }
             &__logo {
                 svg {
                     width: 38px;
                     height: 29px;
                 }
+            }
+            &__menu {
+                height: 60px;
             }
         }
         .main {
@@ -358,7 +398,7 @@ $Rubik: "Rubik", sans-serif;
             &__volunteer {
                 gap: 30px;
                 width: 300px;
-                p{
+                p {
                     font-size: 14px;
                     line-height: 154%;
                 }
@@ -390,5 +430,4 @@ $Rubik: "Rubik", sans-serif;
     .subtitle {
         font-size: 14px;
     }
-    
 }
