@@ -2,8 +2,20 @@ $fontSizeText: 18px;
 $fontSizeTitle: 26px;
 $darkBlue: #080029;
 $animationSpeed: 0.3s;
+
 $activeColor: rgb(0, 153, 255);
-$padding: 3.5%;
+$titleColor: #626262;
+$colorText: #747474;
+$btnColor: #0f0049;
+$btnSliderColorDark: #181818;
+$wightBlue: #d9e8ff;
+$blue: #0F0049;
+
+$paddingLayout: 3.5%;
+$headerWidth: 90px;
+
+$Merriweather: "Merriweather", serif;
+$Rubik: "Rubik", sans-serif;
 
 * {
     padding: 0;
@@ -17,43 +29,18 @@ button {
     outline: none;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .layout {
-    padding: $padding;
-    height: 15000px;
-    .soc__media {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-        width: 92px;
-        position: fixed;
-        z-index: 100;
-        height: 71vh;
-        background-color: red;
-        border-right: 2px solid #f0f0f0;
-        border-left: 2px solid #f0f0f0;
-        border-bottom: 2px solid #f0f0f0;
-        overflow: hidden;
-        background-color: rgb(255, 255, 255);
-        &__links{
-            display: flex;
-            flex-direction: column;
-            gap: 45px;
-        }
-        &__closed{
-            margin: 9vh 0;
-            // margin-bottom: 100px;
-        }
-    }
+    width: 100%;
     .header {
         width: 100%;
         position: fixed;
         z-index: 1000;
         left: 0;
         top: 25px;
-        padding: 0 $padding;
+        padding: 0 $paddingLayout;
         &__logo,
         &__menu,
         &__user,
@@ -62,20 +49,54 @@ button {
             justify-content: center;
             align-items: center;
         }
+        &__soc__media {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            width: 92px;
+            position: absolute;
+            z-index: -1;
+            height: 60px;
+            border-right: 2px solid #f0f0f0;
+            border-left: 2px solid #f0f0f0;
+            border-bottom: 2px solid #f0f0f0;
+            overflow: hidden;
+            transition-duration: $animationSpeed;
+            background-color: rgb(255, 255, 255);
+            top: 0;
+            left: -2px;
+            .soc__media__links {
+                display: flex;
+                flex-direction: column;
+                gap: 45px;
+            }
+            .soc__media__closed {
+                margin: 9vh 0;
+            }
+
+            &.open {
+                height: 90vh;
+            }
+        }
         &__nav {
             justify-content: space-between;
             position: relative;
             max-width: 1800px;
-            height: 90px;
+            z-index: 1000;
+            height: $headerWidth;
             margin: auto;
             background: rgb(255, 255, 255);
             border: 2px solid #f0f0f0;
         }
         &__logo {
             position: absolute;
-            height: 90px;
-            width: 90px;
+            height: $headerWidth;
+            width: $headerWidth;
             border-right: 2px solid #f0f0f0;
+            border-top: 2px solid #f0f0f0;
+            border-bottom: 2px solid #f0f0f0;
+            background-color: rgb(255, 255, 255);
         }
         &__menu {
             justify-content: flex-start;
@@ -87,7 +108,7 @@ button {
         &__list {
             a {
                 color: $darkBlue;
-                font-family: "Rubik", sans-serif;
+                font-family: $Rubik;
                 transition-duration: $animationSpeed;
                 display: block;
             }
@@ -107,11 +128,262 @@ button {
             }
         }
     }
+    .main {
+        width: 100%;
+        .wild-park {
+            &__layout {
+                max-width: 1432px;
+                margin: auto;
+                display: flex;
+                padding-top: 170px;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__title {
+                color: $titleColor;
+                font-size: 22px;
+                font-family: $Rubik;
+                padding: 0 0 25px 0;
+            }
+            &__subtitle {
+                color: $darkBlue;
+                font-size: 84px;
+                font-family: $Merriweather;
+                .dot {
+                    position: relative;
+                    z-index: -2;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: 13px;
+                        left: 6px;
+                        height: 18px;
+                        width: 18px;
+                        border-radius: 50%;
+                        background-color: red;
+                    }
+                }
+            }
+            &__btn:nth-of-type(1) {
+                .btn {
+                    background-color: $darkBlue;
+                    color: white;
+                    margin-right: 62px;
+                    margin-top: 60px;
+                }
+            }
+            &__btn:nth-of-type(2) {
+                .btn {
+                    border: 2px solid $darkBlue;
+                    background-color: white;
+                    color: $darkBlue;
+                }
+            }
+        }
+        .how-zoo-work {
+            &__layout {
+                padding: 110px 0;
+                max-width: 1432px;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 224px;
+            }
+            &__text {
+                margin: 40px 0 60px 0;
+            }
+            &__btn {
+                .btn {
+                    color: white;
+                    background-color: $btnColor;
+                }
+            }
+        }
+        .famous-pets {
+            background-color: $wightBlue;
+            padding: 100px 0;
+            &__layout {
+                max-width: 1432px;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &__box {
+                max-width: 325px;
+            }
+            &__btn {
+                margin-top: 55px;
+                display: flex;
+                gap: 20px;
+                .btn-slider {
+                    background-color: $btnSliderColorDark;
+                }
+            }
+            &__slider {
+                width: 1064px;
+                overflow: hidden;
+            }
+            &__slider-bar {
+                display: flex;
+                flex-wrap: wrap;
+                width: 1800px;
+                gap: 40px;
+                transition-duration: 0.5s;
+            }
+            &__animal {
+                width: 328px;
+                height: 328px;
+                background-color: white;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                border-radius: 5px;
+                transition-duration: $animationSpeed;
+                overflow: hidden;
+                position: relative;
+                &:hover {
+                    background-size: 110%;
+                }
+                .animal-container {
+                    width: 100%;
+                    height: 100%;
+                    transition-duration: $animationSpeed;
+                    &:hover {
+                        background-color: rgba($color: #000000, $alpha: 0.3);
+                    }
+                }
+                &:nth-of-type(1) {
+                    background-image: url("../assets/img/slider_red_panda.png");
+                }
+                &:nth-of-type(2) {
+                    background-image: url("../assets/img/slider_penguin.png");
+                }
+                &:nth-of-type(3) {
+                    background-image: url("../assets/img/slider_squirrel.png");
+                }
+                &:nth-of-type(4) {
+                    background-image: url("");
+                }
+                &:nth-of-type(5) {
+                    background-image: url("");
+                }
+                &:nth-of-type(6) {
+                    background-image: url("../assets/img/slider_panda.png");
+                }
+                &:nth-of-type(7) {
+                    background-image: url("../assets/img/slider_eagle.png");
+                }
+                &:nth-of-type(8) {
+                    background-image: url("../assets/img/slider_gorilla.png");
+                }
+                &:nth-of-type(9) {
+                    background-image: url("");
+                }
+                &:nth-of-type(10) {
+                    background-image: url("");
+                }
+            }
+        }
+    }
+}
+
+.btn {
+    border-radius: 5px;
+    border: 2px solid transparent;
+    padding: 20px 75px;
+    font-size: 18px;
+    font-family: $Rubik;
+}
+
+.title {
+    color: $titleColor;
+    font-size: 22px;
+    font-family: $Rubik;
+    padding: 0 0 50px 0;
+}
+
+.subtitle {
+    color: $darkBlue;
+    font-family: $Merriweather;
+    font-size: 36px;
+    text-align: start;
+}
+
+.text {
+    font-size: 18px;
+    color: $colorText;
+    line-height: 154%;
+    font-family: Rubik;
+    line-height: 27.72px;
+}
+
+.btn-slider {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .svg-icon-hover:hover svg {
     path {
         transition-duration: $animationSpeed;
         fill: $activeColor;
+    }
+}
+
+@media screen and(max-width: 1200px) {
+    $headerWidth: 70px;
+    .layout {
+        .header {
+            &__logo {
+                height: $headerWidth;
+                width: $headerWidth;
+            }
+            &__nav {
+                height: $headerWidth;
+            }
+            &__soc__media {
+                width: 72px;
+            }
+            &__profile {
+                height: 10vh;
+                width: 43px;
+                svg {
+                    height: 10vh;
+                    width: 43px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+    $headerWidth: 75px;
+    .layout {
+        .header {
+            &__logo {
+                height: $headerWidth;
+                width: $headerWidth;
+            }
+            &__nav {
+                height: $headerWidth;
+            }
+            &__soc__media {
+                width: 77px;
+            }
+            &__profile {
+                height: 10vh;
+                width: 43px;
+                svg {
+                    height: 10vh;
+                    width: 43px;
+                }
+            }
+        }
     }
 }

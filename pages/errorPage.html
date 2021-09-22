@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
-    <link rel="stylesheet" href="style/homePage.css">
+    <title>Error page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/global/globalStyle.css">
+    <link rel="stylesheet" href="../style/errorPage/errorPage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
@@ -15,7 +20,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,300;1,400&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
@@ -95,135 +99,113 @@
             </nav>
         </header>
         <main class="main">
-            <section class="wild-park">
-                <article class="wild-park__layout">
-                    <div class="wild-park__box">
-                        <p class="wild-park__title title">Wild park</p>
-                        <h1 class="wild-park__subtitle">
-                            <p>Watch your</p>
-                            <p>favorite animal</p>
-                            <p>onl<span class="dot">i</span>ne</p>
-                        </h1>
-                        <a href="#" class="wild-park__btn">
-                            <button class="btn">
-                                Choose zoo
-                            </button>
-                        </a>
-                        <a href="#" class="wild-park__btn">
-                            <button class="btn">
-                                Watch online
-                            </button>
-                        </a>
-                    </div>
-                    <img src="assets/img/panda.png" alt="panda">
-                </article>
-            </section>
-            <section class="how-zoo-work">
-                <article class="how-zoo-work__layout">
-                    <img src="assets/img/leon.png" alt="leon">
-                    <div class="how-zoo-work__box">
-                        <p class="how-zoo-work__title title">How Zoo online works</p>
-                        <h1 class="how-zoo-work__subtitle subtitle">
-                            Our service will give you an unforgettable experience of observing and interacting with
-                            animals remotely
-                        </h1>
-                        <p class="how-zoo-work__text text">
-                            Zoo Online is a web application with which you can watch live cages of different animals in
-                            nature reserves and zoos online and, if you wish, donate to the needs of the animal you like
+            <section class="error">
+                <article class="error__layout">
+                    <h1 class="error__title subtitle">Oops... you seem to be lost</h1>
+                    <div class="error__subtitle">
+                        <p class="subtitle">
+                            Just don't be discouraged, but there is no such page :(
                         </p>
-                        <a href="#" class="how-zoo-work__btn">
-                            <button class="btn">
-                                Try now
-                            </button>
-                        </a>
+                        <p class="subtitle">
+                            We can offer you to watch a video with cute pandas or return to the main page
+                        </p>
                     </div>
-                </article>
-            </section>
-            <section class="famous-pets">
-                <article class="famous-pets__layout">
-                    <div class="famous-pets__box">
-                        <p class="famous-pets__title title">Famous pets</p>
-                        <h1 class="famous-pets__subtitle subtitle">
-                            <p>You can choose</p>
-                            <p>any animal</p>
-                            <p>you like</p>
-                        </h1>
-                        <div class="famous-pets__btn">
-                            <button class="btn-slider prev">
-                                <svg width="26" height="15" viewBox="0 0 26 15" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M0.800674 8.13789C0.410151 7.74737 0.410151 7.1142 0.800674 6.72368L7.16464 0.359717C7.55516 -0.0308072 8.18833 -0.0308072 8.57885 0.359717C8.96937 0.750242 8.96937 1.38341 8.57885 1.77393L2.922 7.43078L8.57885 13.0876C8.96937 13.4782 8.96937 14.1113 8.57885 14.5019C8.18833 14.8924 7.55516 14.8924 7.16464 14.5019L0.800674 8.13789ZM25.6309 8.43079L1.50778 8.43078L1.50778 6.43078L25.6309 6.43079L25.6309 8.43079Z"
-                                        fill="#FCFCFC" />
-                                </svg>
-                            </button>
-                            <button class="btn-slider next">
-                                <svg width="26" height="15" viewBox="0 0 26 15" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M25.1993 8.13789C25.5898 7.74737 25.5898 7.1142 25.1993 6.72368L18.8354 0.359717C18.4448 -0.0308072 17.8117 -0.0308072 17.4211 0.359717C17.0306 0.750242 17.0306 1.38341 17.4211 1.77393L23.078 7.43078L17.4212 13.0876C17.0306 13.4782 17.0306 14.1113 17.4212 14.5019C17.8117 14.8924 18.4448 14.8924 18.8354 14.5019L25.1993 8.13789ZM0.369141 8.43079L24.4922 8.43078L24.4922 6.43078L0.369141 6.43079L0.369141 8.43079Z"
-                                        fill="#FCFCFC" />
-                                </svg>
-                            </button>
-                        </div>
+                    <a href="#" class="error__btn">
+                        <button class="btn">
+                            Back to main page
+                        </button>
+                    </a>
+                    <div class="error__vidio">
+                        <iframe width="900" height="507" src="https://www.youtube.com/embed/c51QNuqbozE?"></iframe>
                     </div>
-                    <div class="famous-pets__slider">
-                        <div class="famous-pets__slider-bar">
-                            <div class="famous-pets__animal">
-                                <div class="animal-container">
-
-                                </div>
-                            </div>
-                            <div class="famous-pets__animal">
-                                <div class="animal-container">
-
-                                </div>
-                            </div>
-                            <div class="famous-pets__animal">
-                                <div class="animal-container">
-
-                                </div>
-                            </div>
-                            <div class="famous-pets__animal">
-                                <div class="animal-container">
-
-                                </div>
-                            </div>
-                            <div class="famous-pets__animal">
-                                <div class="animal-container">
-
-                                </div>
-                            </div>
-                            <div class="famous-pets__animal">
-                                <div class="animal-container">
-
-                                </div>
-                            </div>
-                            <div class="famous-pets__animal">
-                                <div class="animal-container">
-
-                                </div>
-                            </div>
-                            <div class="famous-pets__animal">
-                                <div class="animal-container">
-
-                                </div>
-                            </div>
-                            <div class="famous-pets__animal">
-                                <div class="animal-container">
-
-                                </div>
-                            </div>
-                            <div class="famous-pets__animal">
-                                <div class="animal-container">
-
-                                </div>
-                            </div>
-                        </div>
+                    <div class="error__text">
+                        <p class="text">You can write to support and we will try to solve</p>
+                        <p class="text">your problem, <a href="#"> click here to go to support.</a></p>
                     </div>
                 </article>
             </section>
         </main>
+        <footer class="footer">
+            <section class="footer__box">
+                <nav class="footer__layout">
+                    <div class="footer__icons">
+                        <svg width="153" height="117" viewBox="0 0 53 40" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M23.1348 35.5654C24.4082 36.2021 27.7192 37.0935 30.7755 35.5654" stroke="white"
+                                stroke-width="2.14582" stroke-linecap="round" />
+                            <path
+                                d="M10.6076 5.81018C9.29637 8.69216 6.81331 9.64348 4.86919 9.12255C2.92507 8.60163 1.40311 5.96606 1.92394 4.02229C2.44477 2.07852 5.08061 0.557039 7.02473 1.07796C8.96885 1.59889 11.1284 3.86641 10.6076 5.81018Z"
+                                fill="white" />
+                            <path
+                                d="M42.9536 5.8594C44.2655 8.74323 46.7498 9.69526 48.6948 9.1741C50.6398 8.65294 52.1624 6.01579 51.6412 4.07079C51.12 2.12578 48.4829 0.603222 46.5379 1.12439C44.5929 1.64555 42.4324 3.91439 42.9536 5.8594Z"
+                                fill="white" />
+                            <path
+                                d="M15.1713 32.9077C12.4236 32.9077 10.2605 32.2354 8.68202 30.8908C7.10356 29.5462 6.26561 27.5682 6.16818 24.9569C6.14869 24.3918 6.13894 23.5538 6.13894 22.4431C6.13894 21.3128 6.14869 20.4651 6.16818 19.9C6.26561 17.3277 7.1133 15.3497 8.71125 13.9662C10.3287 12.5631 12.482 11.8615 15.1713 11.8615C17.8605 11.8615 20.0138 12.5631 21.6313 13.9662C23.2487 15.3497 24.0964 17.3277 24.1743 19.9C24.2133 21.0303 24.2328 21.878 24.2328 22.4431C24.2328 22.9887 24.2133 23.8267 24.1743 24.9569C24.0769 27.5682 23.2389 29.5462 21.6605 30.8908C20.082 32.2354 17.9189 32.9077 15.1713 32.9077ZM15.1713 28.6985C16.243 28.6985 17.0907 28.3769 17.7143 27.7338C18.3574 27.0908 18.6984 26.1067 18.7374 24.7815C18.7764 23.6513 18.7959 22.8523 18.7959 22.3846C18.7959 21.878 18.7764 21.079 18.7374 19.9877C18.6984 18.6626 18.3574 17.6785 17.7143 17.0354C17.0713 16.3923 16.2236 16.0708 15.1713 16.0708C14.1189 16.0708 13.2713 16.3923 12.6282 17.0354C12.0046 17.6785 11.6636 18.6626 11.6051 19.9877C11.5856 20.5333 11.5759 21.3323 11.5759 22.3846C11.5759 23.4174 11.5856 24.2164 11.6051 24.7815C11.6636 26.1067 12.0046 27.0908 12.6282 27.7338C13.2518 28.3769 14.0995 28.6985 15.1713 28.6985ZM38.9041 32.9077C36.1564 32.9077 33.9934 32.2354 32.4149 30.8908C30.8364 29.5462 29.9985 27.5682 29.901 24.9569C29.8816 24.3918 29.8718 23.5538 29.8718 22.4431C29.8718 21.3128 29.8816 20.4651 29.901 19.9C29.9985 17.3277 30.8462 15.3497 32.4441 13.9662C34.0616 12.5631 36.2149 11.8615 38.9041 11.8615C41.5934 11.8615 43.7467 12.5631 45.3641 13.9662C46.9816 15.3497 47.8293 17.3277 47.9072 19.9C47.9462 21.0303 47.9657 21.878 47.9657 22.4431C47.9657 22.9887 47.9462 23.8267 47.9072 24.9569C47.8098 27.5682 46.9718 29.5462 45.3934 30.8908C43.8149 32.2354 41.6518 32.9077 38.9041 32.9077ZM38.9041 28.6985C39.9759 28.6985 40.8236 28.3769 41.4472 27.7338C42.0903 27.0908 42.4313 26.1067 42.4703 24.7815C42.5093 23.6513 42.5287 22.8523 42.5287 22.3846C42.5287 21.878 42.5093 21.079 42.4703 19.9877C42.4313 18.6626 42.0903 17.6785 41.4472 17.0354C40.8041 16.3923 39.9564 16.0708 38.9041 16.0708C37.8518 16.0708 37.0041 16.3923 36.361 17.0354C35.7375 17.6785 35.3964 18.6626 35.338 19.9877C35.3185 20.5333 35.3087 21.3323 35.3087 22.3846C35.3087 23.4174 35.3185 24.2164 35.338 24.7815C35.3964 26.1067 35.7375 27.0908 36.361 27.7338C36.9846 28.3769 37.8323 28.6985 38.9041 28.6985Z"
+                                fill="white" />
+                        </svg>
+                        <div class="footer__collaboration">
+                            <a href="#">
+                                <img src="../assets/icon/yem_digital.svg" alt="yem digital">
+                            </a>
+                            <span>X</span>
+                            <a href="#">
+                                <img src="../assets/icon/rs_school_js.svg" alt="rs school">
+                            </a>
+
+                        </div>
+                    </div>
+                    <ul class="footer__navigation">
+                        <li class="navigation__link">
+                            Navigation
+                        </li>
+                        <li class="navigation__link">
+                            <a href="#">Main page</a>
+                        </li>
+                        <li class="navigation__link">
+                            <a href="#">About us</a>
+                        </li>
+                        <li class="navigation__link">
+                            <a href="#">Pets i zoo</a>
+                        </li>
+                        <li class="navigation__link">
+                            <a href="#">Instruction</a>
+                        </li>
+                        <li class="navigation__link">
+                            <a href="#">Testimonials</a>
+                        </li>
+                        <li class="navigation__link">
+                            <a href="#">Animal map</a>
+                        </li>
+                    </ul>
+                    <div class="footer__supp">
+                        <div class="footer__volunteer">
+                            <h1 class="footer__title">Support of volunteers</h1>
+                            <p>You can thank the volunteers for their work. For example, caring for animals and sincere
+                                love
+                                for them.</p>
+                            <a href="#" class="footer__btn">
+                                <button class="btn">Donate for volunteers </button>
+                            </a>
+                        </div>
+                        <ul class="footer__soc-media">
+                            <li>
+                                <a href="#">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#">Twitter</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="footer__copyright">
+                    <p>Copyright ©RSSchool and ©Yem Digital 2020 - 2021</p>
+                    <p>Designed by Vladislav Chernov</p>
+                </div>
+            </section>
+        </footer>
     </div>
 </body>
 
