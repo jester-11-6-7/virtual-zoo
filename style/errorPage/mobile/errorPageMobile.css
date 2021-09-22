@@ -76,8 +76,7 @@
 }
 
 .layout .main .error__layout {
-  padding-top: 200px;
-  max-width: 900px;
+  max-width: 600px;
   height: 997px;
   margin: auto;
   display: -webkit-box;
@@ -87,8 +86,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -96,6 +96,7 @@
 
 .layout .main .error__title {
   position: relative;
+  margin-bottom: 25px;
 }
 
 .layout .main .error__title::before {
@@ -104,37 +105,40 @@
   z-index: -1;
   bottom: -17px;
   left: 50%;
+  font-family: "Merriweather", serif;
   color: #d9e8ff;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   font-size: 96px;
 }
 
-.layout .main .error__subtitle .subtitle {
-  line-height: 154%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 16px;
-  font-family: "Rubik", sans-serif;
+.layout .main .error__subtitle {
+  margin-bottom: 35px;
+}
+
+.layout .main .error__btn {
+  margin-bottom: 70px;
 }
 
 .layout .main .error__btn .btn {
   color: white;
   background-color: #0f0049;
+  border-color: #0f0049;
+}
+
+.layout .main .error__vidio {
+  margin-bottom: 40px;
 }
 
 .layout .main .error__vidio iframe {
   width: 600px;
   height: 338px;
   border: none;
+  border-radius: 5px;
 }
 
 .layout .main .error__text {
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .layout .main .error__text .text {
@@ -180,7 +184,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
   padding: 80px 0 60px 0;
 }
 
@@ -205,7 +209,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 115px;
+  gap: 127px;
   width: 100%;
 }
 
@@ -222,6 +226,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 24px;
+  font-size: 16px;
 }
 
 .layout .footer__collaboration .yem-digital {
@@ -250,10 +255,6 @@
   margin-bottom: 10px;
   font-weight: 400;
   color: #fcfcfc;
-}
-
-.layout .footer__supp {
-  margin-right: 13px;
 }
 
 .layout .footer__volunteer {
@@ -305,18 +306,18 @@
   font-family: "Rubik", sans-serif;
 }
 
-.title {
-  color: #626262;
-  font-size: 22px;
-  font-family: "Rubik", sans-serif;
-  padding: 0 0 50px 0;
-}
-
 .subtitle {
   color: #080029;
-  font-family: "Merriweather", serif;
-  font-size: 26px;
-  text-align: start;
+  font-size: 16px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 154%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Rubik", sans-serif;
 }
 
 .text {
@@ -325,5 +326,148 @@
   line-height: 154%;
   font-family: Rubik;
   line-height: 27.72px;
+}
+
+.title {
+  font-family: "Merriweather", serif;
+  font-size: 26px;
+  color: #080029;
+}
+
+@media screen and (max-width: 639px) {
+  .layout {
+    width: 100%;
+  }
+  .layout .header__nav {
+    height: 59px;
+    padding: 0 10px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  .layout .header__logo svg {
+    width: 38px;
+    height: 29px;
+  }
+  .layout .main {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .layout .main .error {
+    padding-top: 157px;
+  }
+  .layout .main .error__layout {
+    max-width: 600px;
+    height: auto;
+  }
+  .layout .main .error__title {
+    position: relative;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  .layout .main .error__subtitle {
+    max-width: 300px;
+    margin-bottom: 25px;
+  }
+  .layout .main .error__btn {
+    margin-bottom: 40px;
+  }
+  .layout .main .error__vidio {
+    margin-bottom: 30px;
+  }
+  .layout .main .error__vidio iframe {
+    width: 300px;
+    height: 169px;
+  }
+  .layout .main .error__text {
+    margin-bottom: 50px;
+  }
+  .layout .footer {
+    padding: 0 10px;
+    width: 100%;
+  }
+  .layout .footer__box {
+    margin: auto;
+  }
+  .layout .footer__layout {
+    width: 300px;
+    padding: 60px 0 36px 0;
+  }
+  .layout .footer__icons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 75px;
+    width: auto;
+  }
+  .layout .footer__icons svg {
+    width: 60px;
+    height: 47px;
+  }
+  .layout .footer__collaboration {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .layout .footer__collaboration .yem-digital {
+    width: 80px;
+  }
+  .layout .footer__collaboration .rs-school {
+    width: 84px;
+  }
+  .layout .footer__navigation {
+    gap: 21px;
+    margin-right: 31px;
+    font-size: 14px;
+  }
+  .layout .footer__navigation .navigation__link:nth-of-type(1) {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .layout .footer__supp {
+    text-align: center;
+  }
+  .layout .footer__volunteer {
+    gap: 30px;
+    width: 300px;
+  }
+  .layout .footer__volunteer p {
+    font-size: 14px;
+    line-height: 154%;
+  }
+  .layout .footer__btn .btn {
+    width: 100%;
+  }
+  .layout .footer__soc-media {
+    margin-top: 37px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .layout .footer__copyright {
+    gap: 8px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 11px;
+  }
+  .btn {
+    font-size: 14px;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .subtitle {
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=errorPageMobile.css.map */

@@ -4,7 +4,7 @@
 
 .layout .header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 25px;
   padding: 0 3.5%;
@@ -24,51 +24,7 @@
 }
 
 .layout .header__soc__media {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  width: 92px;
-  position: absolute;
-  z-index: -1;
-  height: 60px;
-  border-right: 2px solid #f0f0f0;
-  border-left: 2px solid #f0f0f0;
-  border-bottom: 2px solid #f0f0f0;
-  overflow: hidden;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  background-color: white;
-  top: 0;
-  left: -2px;
-}
-
-.layout .header__soc__media .soc__media__links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 45px;
-}
-
-.layout .header__soc__media .soc__media__closed {
-  margin: 9vh 0;
-}
-
-.layout .header__soc__media.open {
-  height: 90vh;
+  display: none;
 }
 
 .layout .header__nav {
@@ -81,16 +37,12 @@
   height: 90px;
   margin: auto;
   background: white;
-  border: 2px solid #f0f0f0;
 }
 
 .layout .header__logo {
   position: absolute;
   height: 90px;
   width: 90px;
-  border-right: 2px solid #f0f0f0;
-  border-top: 2px solid #f0f0f0;
-  border-bottom: 2px solid #f0f0f0;
   background-color: white;
 }
 
@@ -119,7 +71,6 @@
 .layout .header__profile {
   height: 52px;
   width: 52px;
-  margin-right: 8.5%;
 }
 
 .layout .header__profile:hover svg circle {
@@ -212,8 +163,8 @@
 }
 
 .layout .footer__box {
-  max-width: 1432px;
   margin: auto;
+  max-width: 1800px;
   color: white;
   font-family: "Rubik", sans-serif;
   display: -webkit-box;
@@ -354,10 +305,9 @@
 }
 
 .title {
-  color: #626262;
-  font-size: 22px;
-  font-family: "Rubik", sans-serif;
-  padding: 0 0 50px 0;
+  font-family: "Merriweather", serif;
+  font-size: 36px;
+  color: #080029;
 }
 
 .subtitle {
@@ -417,7 +367,6 @@
   .layout .header__profile {
     height: 52px;
     width: 52px;
-    margin-right: 8.5%;
   }
   .layout .header__profile:hover svg circle {
     -webkit-transition-duration: 0.3s;
@@ -494,6 +443,9 @@
     font-size: 16px;
   }
   .subtitle {
+    font-size: 28px;
+  }
+  .title {
     font-size: 28px;
   }
 }

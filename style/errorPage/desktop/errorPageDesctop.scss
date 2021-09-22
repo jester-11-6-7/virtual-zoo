@@ -24,7 +24,7 @@ $Rubik: "Rubik", sans-serif;
     width: 100%;
     .header {
         width: 100%;
-        position: fixed;
+        position: absolute;
         left: 0;
         top: 25px;
         padding: 0 $paddingLayout;
@@ -38,34 +38,7 @@ $Rubik: "Rubik", sans-serif;
             align-items: center;
         }
         &__soc__media {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-            width: 92px;
-            position: absolute;
-            z-index: -1;
-            height: 60px;
-            border-right: 2px solid #f0f0f0;
-            border-left: 2px solid #f0f0f0;
-            border-bottom: 2px solid #f0f0f0;
-            overflow: hidden;
-            transition-duration: $animationSpeed;
-            background-color: rgb(255, 255, 255);
-            top: 0;
-            left: -2px;
-            .soc__media__links {
-                display: flex;
-                flex-direction: column;
-                gap: 45px;
-            }
-            .soc__media__closed {
-                margin: 9vh 0;
-            }
-
-            &.open {
-                height: 90vh;
-            }
+            display: none;
         }
         &__nav {
             justify-content: space-between;
@@ -75,15 +48,11 @@ $Rubik: "Rubik", sans-serif;
             height: $headerWidth;
             margin: auto;
             background: rgb(255, 255, 255);
-            border: 2px solid #f0f0f0;
         }
         &__logo {
             position: absolute;
             height: $headerWidth;
             width: $headerWidth;
-            border-right: 2px solid #f0f0f0;
-            border-top: 2px solid #f0f0f0;
-            border-bottom: 2px solid #f0f0f0;
             background-color: rgb(255, 255, 255);
         }
         &__menu {
@@ -107,7 +76,6 @@ $Rubik: "Rubik", sans-serif;
         &__profile {
             height: 52px;
             width: 52px;
-            margin-right: 8.5%;
             &:hover svg {
                 circle {
                     transition-duration: $animationSpeed;
@@ -132,7 +100,6 @@ $Rubik: "Rubik", sans-serif;
             }
             &__title {
                 position: relative;
-                // margin-bottom: 30px;
                 &::before {
                     content: "404";
                     position: absolute;
@@ -145,7 +112,6 @@ $Rubik: "Rubik", sans-serif;
                 }
             }
             &__subtitle {
-                // margin-bottom: 50px;
                 .subtitle {
                     line-height: 154%;
                     display: flex;
@@ -155,14 +121,12 @@ $Rubik: "Rubik", sans-serif;
                 }
             }
             &__btn {
-                // margin-bottom: 80px;
                 .btn {
                     color: white;
                     background-color: $blue;
                 }
             }
             &__vidio {
-                // margin-bottom: 60px;
                 border: none;
             }
             &__text {
@@ -179,8 +143,8 @@ $Rubik: "Rubik", sans-serif;
         width: 100%;
         background-color: $footerBgColor;
         &__box {
-            max-width: 1432px;
             margin: auto;
+            max-width: 1800px;
             color: white;
             font-family: $Rubik;
             display: flex;
@@ -271,11 +235,10 @@ $Rubik: "Rubik", sans-serif;
     font-family: $Rubik;
 }
 
-.title {
-    color: $titleColor;
-    font-size: 22px;
-    font-family: $Rubik;
-    padding: 0 0 50px 0;
+.title{
+    font-family: $Merriweather;
+    font-size: 36px;
+    color: $darkBlue;
 }
 
 .subtitle {
@@ -339,7 +302,6 @@ $Rubik: "Rubik", sans-serif;
             &__profile {
                 height: 52px;
                 width: 52px;
-                margin-right: 8.5%;
                 &:hover svg {
                     circle {
                         transition-duration: $animationSpeed;
@@ -403,7 +365,6 @@ $Rubik: "Rubik", sans-serif;
                 svg {
                     width: 119px;
                     height: 91;
-                    // margin-bottom: 103px;
                 }
             }
             &__collaboration {
@@ -429,6 +390,9 @@ $Rubik: "Rubik", sans-serif;
         font-size: 16px;
     }
     .subtitle {
+        font-size: 28px;
+    }
+    .title{
         font-size: 28px;
     }
 }
