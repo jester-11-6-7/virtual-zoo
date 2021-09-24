@@ -3,7 +3,8 @@ $fontSizeTitle: 26px;
 $animationSpeed: 0.3s;
 
 $darkBlue: #080029;
-$activeColor: rgb(0, 153, 255);
+$activeColor: #028ddd;
+$activeColorBtn: #150068;
 $titleColor: #626262;
 $colorText: #747474;
 $btnColor: #0f0049;
@@ -124,6 +125,12 @@ $Rubik: "Rubik", sans-serif;
                 .btn {
                     color: white;
                     background-color: $blue;
+                    &:hover{
+                        background-color: $darkBlue;
+                    }
+                    &:active{
+                        background-color: $activeColorBtn;
+                    }
                 }
             }
             &__vidio {
@@ -209,6 +216,10 @@ $Rubik: "Rubik", sans-serif;
                 color: $footerTitleColor;
                 padding: 20px 0;
                 width: 100%;
+                &:hover{
+                    background-color: white;
+                    color: black;
+                }
             }
         }
         &__soc-media {
@@ -230,6 +241,7 @@ $Rubik: "Rubik", sans-serif;
 .btn {
     border-radius: 5px;
     border: 2px solid transparent;
+    transition-duration: $animationSpeed;
     padding: 20px 75px;
     font-size: 18px;
     font-family: $Rubik;
@@ -256,9 +268,10 @@ $Rubik: "Rubik", sans-serif;
     line-height: 27.72px;
 }
 
-.burger-menu{
+.desctop-hidden{
     display: none;
 }
+
 
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
     $headerWidth: 70px;

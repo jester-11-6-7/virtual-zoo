@@ -33,7 +33,6 @@ $Rubik: "Rubik", sans-serif;
             align-items: center;
             background-color: white;
             padding: 0 $paddingLayout;
-            // border-bottom: 2px solid #f0f0f0;
         }
         &__logo {
             svg {
@@ -43,11 +42,11 @@ $Rubik: "Rubik", sans-serif;
         }
         &__menu {
             width: 100%;
-            height: 90px;
+            height: 100vh;
             overflow: hidden;
             border-bottom: 2px solid #f0f0f0;
-            top: 0;
-            padding: 55px 0 0 0;
+            top: calc(-100vh + 90px);
+            padding: 55px 0 55px 0;
             position: absolute;
             display: flex;
             flex-direction: column;
@@ -62,7 +61,7 @@ $Rubik: "Rubik", sans-serif;
             transition-duration: 0.5s;
             transition-timing-function: ease;
             &.show {
-                height: 100vh;
+                top: 0;
             }
         }
         &__soc__media {
@@ -263,7 +262,7 @@ $Rubik: "Rubik", sans-serif;
     color: $darkBlue;
 }
 
-.profile {
+.mobile__hidden{
     display: none;
 }
 
@@ -315,7 +314,7 @@ $Rubik: "Rubik", sans-serif;
                 }
             }
             &__menu {
-                height: 60px;
+                top: calc(-100vh + 61px);
             }
         }
         .main {
