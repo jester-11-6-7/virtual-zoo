@@ -64,6 +64,10 @@
   top: 0;
 }
 
+.layout .header__menu a {
+  color: #000000;
+}
+
 .layout .header__soc__media {
   display: none;
 }
