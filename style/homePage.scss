@@ -12,7 +12,7 @@ $wightBlue: #d9e8ff;
 $blue: #0f0049;
 $footerBgColor: #0b0b0b;
 $footerTextColor: #bcbcbc;
-$footerTitleColor: #FCFCFC;
+$footerTitleColor: #fcfcfc;
 
 $paddingLayout: 3.5%;
 $headerWidth: 90px;
@@ -220,8 +220,6 @@ button {
             }
             &__btn {
                 margin-top: 55px;
-                display: flex;
-                gap: 20px;
                 .btn-slider {
                     background-color: $btnSliderColorDark;
                 }
@@ -291,6 +289,250 @@ button {
                 }
             }
         }
+        .pay-and-feed {
+            padding: 100px 0 136px 0;
+            &__layout {
+                display: flex;
+                flex-direction: column;
+                padding-left: 244px;
+                max-width: 1920px;
+                margin: auto;
+            }
+            &__title {
+                padding-bottom: 0;
+                padding-left: 184px;
+            }
+            &__box {
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                align-items: center;
+                max-width: 824px;
+                justify-content: space-between;
+                &:nth-of-type(1) {
+                    margin: 85px 0 0 201px;
+                    &::after {
+                        content: url(../assets/img/arrow_1.png);
+                        left: 57%;
+                        position: absolute;
+                        bottom: -85px;
+                    }
+                }
+                &:nth-of-type(2) {
+                    margin: 129px 0 0 751px;
+                    &::before {
+                        content: url(../assets/img/arrow_2.png);
+                        left: -35%;
+                        position: absolute;
+                        top: 50%;
+                    }
+                }
+                &:nth-of-type(3) {
+                    margin: 129px 0 0 16px;
+                }
+            }
+            &__content {
+                max-width: 456px;
+            }
+        }
+        .testimonials {
+            background-color: $darkBlue;
+            padding: 100px 0;
+            &__layout {
+                padding-left: 244px;
+                max-width: 1920px;
+                margin: auto;
+                display: flex;
+                gap: 40px;
+            }
+            &__title,
+            &__subtitle,
+            &__more-reviews,
+            &__about-text {
+                color: $footerTitleColor;
+            }
+            &__about-text {
+                margin-top: 40px;
+                max-width: 512px;
+                font-weight: 300;
+            }
+            &__btn {
+                .btn {
+                    margin-top: 80px;
+                    color: $footerTitleColor;
+                    border-color: $footerTitleColor;
+                }
+            }
+            &__slider {
+                width: 1024px;
+                overflow: hidden;
+            }
+            &__slider-box {
+                display: flex;
+                gap: 40px;
+                margin-top: 25px;
+            }
+            &__user-reviews {
+                width: 512px;
+                height: 273px;
+                background-color: $footerTitleColor;
+                border-radius: 15px;
+                padding: 40px;
+            }
+            &__user {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+            &__user-avatar {
+                width: 46px;
+                border-radius: 50%;
+                overflow: hidden;
+                border: 1px solid #e3e3e3;
+            }
+            &__user-name {
+                font-family: $Rubik;
+                font-size: 24px;
+                color: $footerBgColor;
+                font-weight: 500;
+            }
+            &__text {
+                color: #181818;
+                margin-top: 30px;
+            }
+            &__btn {
+                margin-top: 30px;
+                .btn-slider {
+                    background-color: $footerTitleColor;
+                }
+            }
+        }
+        .zoo-map {
+            padding: 50px 0 114px 0;
+            &__layout {
+                max-width: 1920px;
+                padding-left: 244px;
+                margin: auto;
+                display: flex;
+                gap: 25px;
+            }
+            &__animal-card {
+                width: 344px;
+                margin-top: 50px;
+            }
+            &__cards {
+                position: relative;
+            }
+            &__card {
+                box-shadow: 4px 12px 22px rgba(0, 0, 0, 0.06);
+                border-radius: 15px;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                transition-duration: 0.7s;
+                left: -388px;
+                width: 344px;
+                height: 512px;
+                opacity: 0;
+                &:nth-of-type(1) {
+                    .zoo-map__card__img {
+                        background-image: url(../assets/img/card_eagle.png);
+                    }
+                }
+                &:nth-of-type(2) {
+                    .zoo-map__card__img {
+                        background-image: url(../assets/img/card_alligator.png);
+                    }
+                }
+                &:nth-of-type(3) {
+                    .zoo-map__card__img {
+                        background-image: url(../assets/img/card_gorilla.png);
+                    }
+                }
+                &:nth-of-type(4) {
+                    .zoo-map__card__img {
+                        background-image: url(../assets/img/card_panda.png);
+                    }
+                }
+                &.show__card {
+                    left: 0px;
+                    opacity: 1;
+                }
+            }
+            &__card__img {
+                width: 100%;
+                height: 218px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            &__card__about-animal {
+                padding: 20px 40px 45px;
+                text-align: center;
+                height: 298px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            &__card__subtitle {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            &__card__about-text {
+                color: #747474;
+                line-height: 154%;
+            }
+            &__card__link {
+                font-size: 18px;
+                font-family: Rubik;
+                color: #3888ff;
+            }
+            &__animal-map {
+                height: 700px;
+                width: 1223px;
+                background-image: url(../assets/img/world.png);
+            }
+            &__animal-map__layout {
+                position: relative;
+            }
+            &__marker {
+                position: absolute;
+                transition-duration: $animationSpeed;
+                padding-bottom: 100px;
+                g {
+                    path {
+                        stroke: transparent;
+                    }
+                }
+                &:nth-of-type(1) {
+                    top: 190px;
+                    left: 120px;
+                }
+                &:nth-of-type(2) {
+                    top: 204px;
+                    left: 253px;
+                }
+                &:nth-of-type(3) {
+                    top: 195px;
+                    left: 890px;
+                }
+                &:nth-of-type(4) {
+                    top: 330px;
+                    left: 570px;
+                }
+                &:hover:not(.zoo-map__marker__active) {
+                    transform: scale(1.2);
+                }
+            }
+            &__marker__active {
+                transform: scale(1.3);
+                g {
+                    .marker__color{
+                        stroke: #609fff;
+                    }
+                }
+            }
+        }
     }
     .footer {
         padding: $paddingLayout;
@@ -315,23 +557,23 @@ button {
             a {
                 color: $footerTextColor;
                 transition-duration: $animationSpeed;
-                &:hover{
+                &:hover {
                     color: $activeColor;
                 }
             }
         }
-        &__title{
+        &__title {
             color: $footerTitleColor;
             font-weight: 400;
             font-size: 22px;
         }
-        &__icons{
+        &__icons {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-self: stretch;
         }
-        &__collaboration{
+        &__collaboration {
             display: flex;
             align-items: center;
             gap: 24px;
@@ -351,21 +593,21 @@ button {
                 }
             }
         }
-        &__volunteer{
+        &__volunteer {
             max-width: 339px;
             display: flex;
             flex-direction: column;
             gap: 40px;
         }
-        &__btn{
-            .btn{
+        &__btn {
+            .btn {
                 border-color: $footerTitleColor;
                 color: $footerTitleColor;
                 padding: 20px 0;
                 width: 100%;
             }
         }
-        &__soc-media{
+        &__soc-media {
             margin-top: 85px;
             display: flex;
             gap: 45px;
@@ -394,6 +636,7 @@ button {
     font-size: 22px;
     font-family: $Rubik;
     padding: 0 0 50px 0;
+    letter-spacing: 0.115em;
 }
 
 .subtitle {
@@ -427,54 +670,11 @@ button {
     }
 }
 
-@media screen and(max-width: 1200px) {
-    $headerWidth: 70px;
-    .layout {
-        .header {
-            &__logo {
-                height: $headerWidth;
-                width: $headerWidth;
-            }
-            &__nav {
-                height: $headerWidth;
-            }
-            &__soc__media {
-                width: 72px;
-            }
-            &__profile {
-                height: 10vh;
-                width: 43px;
-                svg {
-                    height: 10vh;
-                    width: 43px;
-                }
-            }
-        }
-    }
+.desctop-hidden {
+    display: none;
 }
 
-@media (min-width: 1201px) and (max-width: 1600px) {
-    $headerWidth: 75px;
-    .layout {
-        .header {
-            &__logo {
-                height: $headerWidth;
-                width: $headerWidth;
-            }
-            &__nav {
-                height: $headerWidth;
-            }
-            &__soc__media {
-                width: 77px;
-            }
-            &__profile {
-                height: 10vh;
-                width: 43px;
-                svg {
-                    height: 10vh;
-                    width: 43px;
-                }
-            }
-        }
-    }
+.slider-btn-box {
+    display: flex;
+    gap: 20px;
 }

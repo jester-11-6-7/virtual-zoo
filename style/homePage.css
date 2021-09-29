@@ -256,10 +256,6 @@ button {
 
 .layout .main .famous-pets__btn {
   margin-top: 55px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 20px;
 }
 
 .layout .main .famous-pets__btn .btn-slider {
@@ -352,6 +348,319 @@ button {
   background-image: url("");
 }
 
+.layout .main .pay-and-feed {
+  padding: 100px 0 136px 0;
+}
+
+.layout .main .pay-and-feed__layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 244px;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.layout .main .pay-and-feed__title {
+  padding-bottom: 0;
+  padding-left: 184px;
+}
+
+.layout .main .pay-and-feed__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 824px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.layout .main .pay-and-feed__box:nth-of-type(1) {
+  margin: 85px 0 0 201px;
+}
+
+.layout .main .pay-and-feed__box:nth-of-type(1)::after {
+  content: url(../assets/img/arrow_1.png);
+  left: 57%;
+  position: absolute;
+  bottom: -85px;
+}
+
+.layout .main .pay-and-feed__box:nth-of-type(2) {
+  margin: 129px 0 0 751px;
+}
+
+.layout .main .pay-and-feed__box:nth-of-type(2)::before {
+  content: url(../assets/img/arrow_2.png);
+  left: -35%;
+  position: absolute;
+  top: 50%;
+}
+
+.layout .main .pay-and-feed__box:nth-of-type(3) {
+  margin: 129px 0 0 16px;
+}
+
+.layout .main .pay-and-feed__content {
+  max-width: 456px;
+}
+
+.layout .main .testimonials {
+  background-color: #080029;
+  padding: 100px 0;
+}
+
+.layout .main .testimonials__layout {
+  padding-left: 244px;
+  max-width: 1920px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+
+.layout .main .testimonials__title, .layout .main .testimonials__subtitle, .layout .main .testimonials__more-reviews, .layout .main .testimonials__about-text {
+  color: #fcfcfc;
+}
+
+.layout .main .testimonials__about-text {
+  margin-top: 40px;
+  max-width: 512px;
+  font-weight: 300;
+}
+
+.layout .main .testimonials__btn .btn {
+  margin-top: 80px;
+  color: #fcfcfc;
+  border-color: #fcfcfc;
+}
+
+.layout .main .testimonials__slider {
+  width: 1024px;
+  overflow: hidden;
+}
+
+.layout .main .testimonials__slider-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  margin-top: 25px;
+}
+
+.layout .main .testimonials__user-reviews {
+  width: 512px;
+  height: 273px;
+  background-color: #fcfcfc;
+  border-radius: 15px;
+  padding: 40px;
+}
+
+.layout .main .testimonials__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.layout .main .testimonials__user-avatar {
+  width: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #e3e3e3;
+}
+
+.layout .main .testimonials__user-name {
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+  color: #0b0b0b;
+  font-weight: 500;
+}
+
+.layout .main .testimonials__text {
+  color: #181818;
+  margin-top: 30px;
+}
+
+.layout .main .testimonials__btn {
+  margin-top: 30px;
+}
+
+.layout .main .testimonials__btn .btn-slider {
+  background-color: #fcfcfc;
+}
+
+.layout .main .zoo-map {
+  padding: 50px 0 114px 0;
+}
+
+.layout .main .zoo-map__layout {
+  max-width: 1920px;
+  padding-left: 244px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.layout .main .zoo-map__animal-card {
+  width: 344px;
+  margin-top: 50px;
+}
+
+.layout .main .zoo-map__cards {
+  position: relative;
+}
+
+.layout .main .zoo-map__card {
+  -webkit-box-shadow: 4px 12px 22px rgba(0, 0, 0, 0.06);
+          box-shadow: 4px 12px 22px rgba(0, 0, 0, 0.06);
+  border-radius: 15px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  left: -388px;
+  width: 344px;
+  height: 512px;
+  opacity: 0;
+}
+
+.layout .main .zoo-map__card:nth-of-type(1) .zoo-map__card__img {
+  background-image: url(../assets/img/card_eagle.png);
+}
+
+.layout .main .zoo-map__card:nth-of-type(2) .zoo-map__card__img {
+  background-image: url(../assets/img/card_alligator.png);
+}
+
+.layout .main .zoo-map__card:nth-of-type(3) .zoo-map__card__img {
+  background-image: url(../assets/img/card_gorilla.png);
+}
+
+.layout .main .zoo-map__card:nth-of-type(4) .zoo-map__card__img {
+  background-image: url(../assets/img/card_panda.png);
+}
+
+.layout .main .zoo-map__card.show__card {
+  left: 0px;
+  opacity: 1;
+}
+
+.layout .main .zoo-map__card__img {
+  width: 100%;
+  height: 218px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.layout .main .zoo-map__card__about-animal {
+  padding: 20px 40px 45px;
+  text-align: center;
+  height: 298px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.layout .main .zoo-map__card__subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.layout .main .zoo-map__card__about-text {
+  color: #747474;
+  line-height: 154%;
+}
+
+.layout .main .zoo-map__card__link {
+  font-size: 18px;
+  font-family: Rubik;
+  color: #3888ff;
+}
+
+.layout .main .zoo-map__animal-map {
+  height: 700px;
+  width: 1223px;
+  background-image: url(../assets/img/world.png);
+}
+
+.layout .main .zoo-map__animal-map__layout {
+  position: relative;
+}
+
+.layout .main .zoo-map__marker {
+  position: absolute;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  padding-bottom: 100px;
+}
+
+.layout .main .zoo-map__marker g path {
+  stroke: transparent;
+}
+
+.layout .main .zoo-map__marker:nth-of-type(1) {
+  top: 190px;
+  left: 120px;
+}
+
+.layout .main .zoo-map__marker:nth-of-type(2) {
+  top: 204px;
+  left: 253px;
+}
+
+.layout .main .zoo-map__marker:nth-of-type(3) {
+  top: 195px;
+  left: 890px;
+}
+
+.layout .main .zoo-map__marker:nth-of-type(4) {
+  top: 330px;
+  left: 570px;
+}
+
+.layout .main .zoo-map__marker:hover:not(.zoo-map__marker__active) {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.layout .main .zoo-map__marker__active {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.layout .main .zoo-map__marker__active g .marker__color {
+  stroke: #609fff;
+}
+
 .layout .footer {
   padding: 3.5%;
   width: 100%;
@@ -402,7 +711,7 @@ button {
 }
 
 .layout .footer__title {
-  color: #FCFCFC;
+  color: #fcfcfc;
   font-weight: 400;
   font-size: 22px;
 }
@@ -449,7 +758,7 @@ button {
   font-size: 22px;
   margin-bottom: 10px;
   font-weight: 400;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 .layout .footer__volunteer {
@@ -465,8 +774,8 @@ button {
 }
 
 .layout .footer__btn .btn {
-  border-color: #FCFCFC;
-  color: #FCFCFC;
+  border-color: #fcfcfc;
+  color: #fcfcfc;
   padding: 20px 0;
   width: 100%;
 }
@@ -505,6 +814,7 @@ button {
   font-size: 22px;
   font-family: "Rubik", sans-serif;
   padding: 0 0 50px 0;
+  letter-spacing: 0.115em;
 }
 
 .subtitle {
@@ -543,45 +853,14 @@ button {
   fill: #0099ff;
 }
 
-@media screen and (max-width: 1200px) {
-  .layout .header__logo {
-    height: 70px;
-    width: 70px;
-  }
-  .layout .header__nav {
-    height: 70px;
-  }
-  .layout .header__soc__media {
-    width: 72px;
-  }
-  .layout .header__profile {
-    height: 10vh;
-    width: 43px;
-  }
-  .layout .header__profile svg {
-    height: 10vh;
-    width: 43px;
-  }
+.desctop-hidden {
+  display: none;
 }
 
-@media (min-width: 1201px) and (max-width: 1600px) {
-  .layout .header__logo {
-    height: 75px;
-    width: 75px;
-  }
-  .layout .header__nav {
-    height: 75px;
-  }
-  .layout .header__soc__media {
-    width: 77px;
-  }
-  .layout .header__profile {
-    height: 10vh;
-    width: 43px;
-  }
-  .layout .header__profile svg {
-    height: 10vh;
-    width: 43px;
-  }
+.slider-btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
 }
 /*# sourceMappingURL=homePage.css.map */
