@@ -287,14 +287,23 @@ button {
   background-repeat: no-repeat;
   background-size: 100%;
   border-radius: 5px;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   overflow: hidden;
   position: relative;
 }
 
 .layout .main .famous-pets__animal:hover {
-  background-size: 110%;
+  background-size: 105%;
+}
+
+.layout .main .famous-pets__animal a {
+  color: #fcfcfc;
+  line-height: 25px;
+}
+
+.layout .main .famous-pets__animal a:hover {
+  color: #63cff0;
 }
 
 .layout .main .famous-pets__animal .animal-container {
@@ -303,12 +312,82 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  color: #fcfcfc;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 25px;
+  gap: 43px;
 }
 
 .layout .main .famous-pets__animal .animal-container:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  gap: 14px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.layout .main .famous-pets__animal .animal-container:hover .about-animal {
+  width: 238px;
+  height: 238px;
+}
+
+.layout .main .famous-pets__animal .animal-container:hover .about-animal::before {
+  display: none;
+}
+
+.layout .main .famous-pets__animal .animal-container:hover .about-animal__text {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.layout .main .famous-pets__animal .animal-container .about-animal {
+  position: relative;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  width: 76px;
+  height: 76px;
+  padding: 23px;
+  border-radius: 50%;
+  border: 2px solid #fcfcfc;
+}
+
+.layout .main .famous-pets__animal .animal-container .about-animal::before {
+  content: "+";
+  position: absolute;
+  font-weight: 200;
+  font-size: 44px;
+  line-height: 145%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.layout .main .famous-pets__animal .animal-container .about-animal__text {
+  position: absolute;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 500%) scale(3);
+          transform: translate(-50%, 500%) scale(3);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  text-align: center;
+  line-height: 154%;
+  cursor: default;
 }
 
 .layout .main .famous-pets__animal:nth-of-type(1) {

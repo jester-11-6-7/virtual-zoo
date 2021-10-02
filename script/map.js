@@ -1,4 +1,4 @@
-
+// map
 function test(name) {
     const MAPMARKER = document.querySelectorAll('.zoo-map__marker')
     const CARD = document.querySelectorAll('.zoo-map__card')
@@ -13,8 +13,9 @@ function test(name) {
             CARD[i].classList.add('show__card')
         }
     }
-}
+};
 
+// sliderFn
 function slider() {
     let offset = 0
 
@@ -32,7 +33,7 @@ function slider() {
             slider.style.transform = `translateX(${offset += oneShift}px)`
         }
     }
-}
+};
 
 !function reviewsSliderFn() {
     const btn = document.querySelector('.testimonials__btn-slider').children
@@ -53,9 +54,7 @@ function slider() {
         parseFloat(window.getComputedStyle(sliderContainer).gap),
         sliderContainer
     ))
-}()
-
-
+}();
 !function animalSliderFn() {
     const btn = document.querySelector('.famous-pets__btn-slider').children
     const sliderContainer = document.querySelector('.famous-pets__slider-bar')
@@ -77,4 +76,24 @@ function slider() {
         sliderContainer,
         2
     ))
-}()
+}();
+
+// card animation
+!function animateCardAnimal() {
+    let animalName = ''
+    let sliderElems = document.querySelectorAll('.animal-container')
+
+    return function () {
+        for (let i = 0; i < sliderElems.length; i++) {
+
+            sliderElems[i].addEventListener('mouseover', (e) => {
+                animalName = e.currentTarget.children[1].innerHTML
+                e.currentTarget.children[1].innerHTML = 'follow &#8594'
+            })
+
+            sliderElems[i].addEventListener('mouseout', (e) => {
+                e.currentTarget.children[1].innerHTML = animalName
+            })
+        }
+    }
+}()();

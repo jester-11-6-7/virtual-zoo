@@ -243,11 +243,18 @@ button {
                 background-repeat: no-repeat;
                 background-size: 100%;
                 border-radius: 5px;
-                transition-duration: $animationSpeed;
+                transition-duration: 0.5s;
                 overflow: hidden;
                 position: relative;
                 &:hover {
-                    background-size: 110%;
+                    background-size: 105%;
+                }
+                a {
+                    color: $footerTitleColor;
+                    line-height: 25px;
+                    &:hover {
+                        color: rgb(99, 207, 240);
+                    }
                 }
                 .animal-container {
                     position: absolute;
@@ -255,9 +262,59 @@ button {
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    transition-duration: $animationSpeed;
+                    color: $footerTitleColor;
+                    font-size: 18px;
+                    font-family: $Rubik;
+                    transition-duration: 0.5s;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding-bottom: 25px;
+                    gap: 43px;
                     &:hover {
-                        background-color: rgba($color: #000000, $alpha: 0.3);
+                        gap: 14px;
+                        background-color: rgba($color: #000000, $alpha: 0.2);
+                        .about-animal {
+                            width: 238px;
+                            height: 238px;
+                            &::before {
+                                display: none;
+                            }
+                        }
+                        .about-animal__text {
+                            transform: translate(-50%, -50%) scale(1);
+                        }
+                    }
+                    .about-animal {
+                        position: relative;
+                        transition-duration: 0.5s;
+                        width: 76px;
+                        height: 76px;
+                        padding: 23px;
+                        border-radius: 50%;
+                        border: 2px solid $footerTitleColor;
+                        &::before {
+                            content: "+";
+                            position: absolute;
+                            font-weight: 200;
+                            font-size: 44px;
+                            line-height: 145%;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                        &__text {
+                            position: absolute;
+                            width: 200px;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, 500%) scale(3);
+                            transition-duration: 0.5s;
+                            text-align: center;
+                            line-height: 154%;
+                            cursor: default;
+                        }
                     }
                 }
                 &:nth-of-type(1) {
@@ -368,7 +425,7 @@ button {
             }
             &__slider {
                 width: 1064px;
-                overflow: hidden; 
+                overflow: hidden;
                 margin-top: 25px;
                 border-radius: 15px;
             }
@@ -533,7 +590,7 @@ button {
             &__marker__active {
                 transform: scale(1.3);
                 g {
-                    .marker__color{
+                    .marker__color {
                         stroke: #609fff;
                     }
                 }
