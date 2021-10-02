@@ -250,6 +250,9 @@ button {
                     background-size: 110%;
                 }
                 .animal-container {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                     width: 100%;
                     height: 100%;
                     transition-duration: $animationSpeed;
@@ -364,20 +367,23 @@ button {
                 }
             }
             &__slider {
-                width: 1024px;
-                overflow: hidden;
+                width: 1064px;
+                overflow: hidden; 
+                margin-top: 25px;
+                border-radius: 15px;
             }
-            &__slider-box {
+            &__slider-bar {
                 display: flex;
                 gap: 40px;
-                margin-top: 25px;
+                transition-duration: 0.5s;
             }
             &__user-reviews {
+                flex-shrink: 0;
                 width: 512px;
                 height: 273px;
                 background-color: $footerTitleColor;
-                border-radius: 15px;
                 padding: 40px;
+                border-radius: 15px;
             }
             &__user {
                 display: flex;
