@@ -39,7 +39,7 @@ button {
     width: 100%;
     .header {
         width: 100%;
-        position: fixed;
+        position: absolute;
         z-index: 1000;
         left: 0;
         top: 25px;
@@ -144,7 +144,6 @@ button {
             }
             &__title {
                 color: $titleColor;
-                font-size: 22px;
                 font-family: $Rubik;
                 padding: 0 0 25px 0;
             }
@@ -231,7 +230,7 @@ button {
             &__slider-bar {
                 display: flex;
                 flex-wrap: wrap;
-                width: 1800px;
+                width: 1432px;
                 gap: 40px;
                 transition-duration: 0.5s;
             }
@@ -241,13 +240,13 @@ button {
                 background-color: white;
                 background-position: center;
                 background-repeat: no-repeat;
-                background-size: 100%;
+                background-size: 105%;
                 border-radius: 5px;
                 transition-duration: 0.5s;
                 overflow: hidden;
                 position: relative;
                 &:hover {
-                    background-size: 105%;
+                    background-size: 110%;
                 }
                 a {
                     color: $footerTitleColor;
@@ -309,7 +308,7 @@ button {
                             width: 200px;
                             top: 50%;
                             left: 50%;
-                            transform: translate(-50%, 500%) scale(3);
+                            transform: translate(-50%, 550%) scale(3);
                             transition-duration: 0.5s;
                             text-align: center;
                             line-height: 154%;
@@ -327,25 +326,19 @@ button {
                     background-image: url("../assets/img/slider_squirrel.png");
                 }
                 &:nth-of-type(4) {
-                    background-image: url("");
+                    background-image: url("../assets/img/slider_tiger.png");
                 }
                 &:nth-of-type(5) {
-                    background-image: url("");
-                }
-                &:nth-of-type(6) {
                     background-image: url("../assets/img/slider_panda.png");
                 }
-                &:nth-of-type(7) {
+                &:nth-of-type(6) {
                     background-image: url("../assets/img/slider_eagle.png");
                 }
-                &:nth-of-type(8) {
+                &:nth-of-type(7) {
                     background-image: url("../assets/img/slider_gorilla.png");
                 }
-                &:nth-of-type(9) {
-                    background-image: url("");
-                }
-                &:nth-of-type(10) {
-                    background-image: url("");
+                &:nth-of-type(8) {
+                    background-image: url("../assets/img/slider_alligator.png");
                 }
             }
         }
@@ -557,6 +550,7 @@ button {
             }
             &__animal-map__layout {
                 position: relative;
+                height: 100%;
             }
             &__marker {
                 position: absolute;
@@ -696,7 +690,7 @@ button {
 
 .title {
     color: $titleColor;
-    font-size: 22px;
+    font-size: 26px;
     font-family: $Rubik;
     padding: 0 0 50px 0;
     letter-spacing: 0.115em;
@@ -740,4 +734,366 @@ button {
 .slider-btn-box {
     display: flex;
     gap: 20px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+    $headerWidth: 70px;
+    $paddingLayout: 40px;
+    .layout {
+        .header {
+            padding: 0 $paddingLayout;
+            &__soc__media {
+                width: 72px;
+                height: 60px;
+                .soc__media__links {
+                    gap: 45px;
+                }
+                .soc__media__closed {
+                    margin: 9vh 0;
+                }
+
+                &.open {
+                    height: 90vh;
+                }
+            }
+            &__nav {
+                width: 1120px;
+                height: $headerWidth;
+            }
+            &__logo {
+                height: $headerWidth;
+                width: $headerWidth;
+            }
+            &__menu {
+                gap: 100px;
+                margin-left: calc(90px + 5.5%);
+                font-size: $fontSizeText;
+            }
+            &__list {
+                a {
+                    color: $darkBlue;
+                    font-family: $Rubik;
+                    transition-duration: $animationSpeed;
+                    display: block;
+                }
+                &:hover a {
+                    color: $activeColor;
+                }
+            }
+            &__profile {
+                height: 42px;
+                width: 42px;
+                margin-right: 100px;
+                display: flex;
+                align-items: center;
+                &:hover svg {
+                    circle {
+                        transition-duration: $animationSpeed;
+                        fill: $activeColor;
+                    }
+                }
+            }
+        }
+        .main {
+            width: 100%;
+            .wild-park {
+                &__layout {
+                    max-width: 1200px;
+                    margin: auto;
+                    padding: 155px 40px 100px 184px;
+                }
+                &__title {
+                    padding: 0 0 35px 0;
+                }
+                &__subtitle {
+                    font-size: 56px;
+                    .dot {
+                        &::before {
+                            z-index: 1;
+                            top: 9px;
+                            left: 5px;
+                            height: 11px;
+                            width: 11px;
+                        }
+                    }
+                }
+                &__btn:nth-of-type(1) {
+                    .btn {
+                        margin-right: 40px;
+                        margin-top: 50px;
+                    }
+                }
+                &__title-img {
+                    width: 400px;
+                }
+            }
+            .how-zoo-work {
+                &__layout {
+                    padding: 100px 40px 100px 184px;
+                    width: 1200px;
+                    margin: auto;
+                    gap: 31px;
+                }
+                &__title-img {
+                    width: 401px;
+                }
+                &__text {
+                    margin: 35px 0 50px 0;
+                }
+            }
+            .famous-pets {
+                background-color: $wightBlue;
+                padding: 0 0;
+                &__layout {
+                    max-width: 1200px;
+                    padding: 94px 184px 94px 184px;
+                }
+                &__box {
+                    max-width: 325px;
+                }
+                &__btn {
+                    margin-top: 30px;
+                }
+                &__slider {
+                    width: 541px;
+                    overflow: hidden;
+                }
+                &__slider-bar {
+                    width: 1107px;
+                    gap: 25px;
+                }
+                &__animal {
+                    width: 258px;
+                    height: 258px;
+                    .animal-container {
+                        font-size: 18px;
+                        padding-bottom: 20px;
+                        gap: 30px;
+                        &:hover {
+                            gap: 11px;
+                            .about-animal {
+                                width: 184px;
+                                height: 184px;
+                            }
+                        }
+                        .about-animal {
+                            width: 59px;
+                            height: 59px;
+                            padding: 17px;
+                            &::before {
+                                font-size: 35px;
+                            }
+                            &__text {
+                                font-size: 14px;
+                                width: 150px;
+                            }
+                        }
+                    }
+                }
+            }
+            .pay-and-feed {
+                padding: 100px 0 164px 0;
+                &__layout {
+                    padding-left: 0;
+                    max-width: 1200px;
+                    padding-left: 184px;
+                }
+                &__title {
+                    padding-bottom: 0;
+                    padding-left: 0;
+                    margin-bottom: 120px;
+                }
+                &__subtitle {
+                    width: 287px;
+                    margin-bottom: 20px;
+                }
+                &__img {
+                    width: 219px;
+                }
+                &__box {
+                    max-width: 753px;
+                    margin-top: 0;
+                    &:nth-of-type(1) {
+                        margin: 0;
+                        margin-left: 157px;
+                        &::after {
+                            content: "";
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        margin: 130px 0 0 157px;
+                        &::before {
+                            content: "";
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        margin: 130px 0 0 157px;
+                    }
+                }
+                &__content {
+                    max-width: 456px;
+                }
+            }
+            .testimonials {
+                padding: 100px 0 80px 0;
+                &__layout {
+                    padding-left: 185px;
+                    max-width: 1200px;
+                    gap: 40px;
+                }
+                &__title{
+                    padding-bottom: 40px;
+                }
+                &__about-text {
+                    margin-top: 40px;
+                    max-width: 392px;
+                }
+                &__btn {
+                    .btn {
+                        margin-top: 60px;
+                    }
+                }
+                &__slider {
+                    width: 454px;
+                }
+                &__user-reviews {
+                    width: 454px;
+                    height: 235px;
+                }
+                &__user-avatar {
+                    width: 46px;
+                    border-radius: 50%;
+                }
+                &__user-name {
+                    font-size: 18px;
+                }
+                &__text {
+                    margin-top: 25px;
+                }
+            }
+            .zoo-map {
+                padding: 50px 0 0 0;
+                &__layout {
+                    max-width: 1200px;
+                    padding-left: 184px;
+                    gap: 25px;
+                    height: 680px;
+                }
+                &__animal-card {
+                    width: 292px;
+                    margin-top: 50px;
+                }
+                &__cards {
+                    position: relative;
+                }
+                &__card {
+                    left: -388px;
+                    width: 292px;
+                    height: 448px;
+                }
+                &__card__img {
+                    width: 100%;
+                    height: 180px;
+                }
+                &__card__about-animal {
+                    padding: 20px 40px 40px;
+                    height: 268px;
+                }
+                &__card__subtitle {
+                    margin-bottom: 20px;
+                }
+                &__card__about-text {
+                    font-size: 14px;
+                }
+                &__card__link {
+                    font-size: 16px;
+                }
+                &__animal-map {
+                    width: 674px;
+                    height: 388px;
+                    background-position: center;
+                    background-size: cover;
+                    margin-top: 134px;
+                }
+                &__animal-map__layout {
+                    height: 100%;
+                }
+                &__marker {
+                    padding-bottom: 100px;
+                    transform: scale(0.55);
+                    &:nth-of-type(1) {
+                        top: 60px;
+                        left: 50px;
+                    }
+                    &:nth-of-type(2) {
+                        top: 60px;
+                        left: 113px;
+                    }
+                    &:nth-of-type(3) {
+                        top: 55px;
+                        left: 460px;
+                    }
+                    &:nth-of-type(4) {
+                        top: 118px;
+                        left: 275px;
+                    }
+                    &:hover:not(.zoo-map__marker__active) {
+                        transform: scale(0.7);
+                    }
+                }
+                &__marker__active {
+                    transform: scale(0.75);
+                }
+            }
+        }
+        .footer {
+            padding: $paddingLayout;
+            &__layout {
+                padding: 100px 0 133px 0;
+            }
+            &__title {
+                color: $footerTitleColor;
+                font-weight: 400;
+                font-size: 22px;
+            }
+            &__icons {
+                svg {
+                    width: 119px;
+                    height: 91;
+                }
+            }
+            &__collaboration {
+                flex-direction: column;
+            }
+            &__navigation {
+                margin-right: 160px;
+            }
+            &__soc-media {
+                margin-top: 93px;
+                gap: 45px;
+                font-size: 20px;
+            }
+            &__copyright {
+                padding: 40px 0 0 0;
+            }
+        }
+    }
+    .text {
+        font-size: 16px;
+    }
+    .btn {
+        font-size: 16px;
+        padding: 16px 60px;
+    }
+    .subtitle {
+        font-size: 28px;
+        line-height: 145%;
+    }
+    .title {
+        font-size: 22px;
+    }
+    .btn-slider {
+        width: 56px;
+        height: 56px;
+    }
 }
