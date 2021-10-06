@@ -390,35 +390,35 @@ button {
 }
 
 .layout .main .famous-pets__animal:nth-of-type(1) {
-  background-image: url("../assets/img/slider_red_panda.png");
+  background-image: url("../../../assets/img/slider_red_panda.png");
 }
 
 .layout .main .famous-pets__animal:nth-of-type(2) {
-  background-image: url("../assets/img/slider_penguin.png");
+  background-image: url("../../../assets/img/slider_penguin.png");
 }
 
 .layout .main .famous-pets__animal:nth-of-type(3) {
-  background-image: url("../assets/img/slider_squirrel.png");
+  background-image: url("../../../assets/img/slider_squirrel.png");
 }
 
 .layout .main .famous-pets__animal:nth-of-type(4) {
-  background-image: url("../assets/img/slider_tiger.png");
+  background-image: url("../../../assets/img/slider_tiger.png");
 }
 
 .layout .main .famous-pets__animal:nth-of-type(5) {
-  background-image: url("../assets/img/slider_panda.png");
+  background-image: url("../../../assets/img/slider_panda.png");
 }
 
 .layout .main .famous-pets__animal:nth-of-type(6) {
-  background-image: url("../assets/img/slider_eagle.png");
+  background-image: url("../../../assets/img/slider_eagle.png");
 }
 
 .layout .main .famous-pets__animal:nth-of-type(7) {
-  background-image: url("../assets/img/slider_gorilla.png");
+  background-image: url("../../../assets/img/slider_gorilla.png");
 }
 
 .layout .main .famous-pets__animal:nth-of-type(8) {
-  background-image: url("../assets/img/slider_alligator.png");
+  background-image: url("../../../assets/img/slider_alligator.png");
 }
 
 .layout .main .pay-and-feed {
@@ -466,7 +466,7 @@ button {
 }
 
 .layout .main .pay-and-feed__box:nth-of-type(1)::after {
-  content: url(../assets/img/arrow_1.png);
+  content: url(../../../assets/img/arrow_1.png);
   left: 57%;
   position: absolute;
   bottom: -85px;
@@ -477,7 +477,7 @@ button {
 }
 
 .layout .main .pay-and-feed__box:nth-of-type(2)::before {
-  content: url(../assets/img/arrow_2.png);
+  content: url(../../../assets/img/arrow_2.png);
   left: -35%;
   position: absolute;
   top: 50%;
@@ -624,19 +624,19 @@ button {
 }
 
 .layout .main .zoo-map__card:nth-of-type(1) .zoo-map__card__img {
-  background-image: url(../assets/img/card_eagle.png);
+  background-image: url(../../../assets/img/card_eagle.png);
 }
 
 .layout .main .zoo-map__card:nth-of-type(2) .zoo-map__card__img {
-  background-image: url(../assets/img/card_alligator.png);
+  background-image: url(../../../assets/img/card_alligator.png);
 }
 
 .layout .main .zoo-map__card:nth-of-type(3) .zoo-map__card__img {
-  background-image: url(../assets/img/card_gorilla.png);
+  background-image: url(../../../assets/img/card_gorilla.png);
 }
 
 .layout .main .zoo-map__card:nth-of-type(4) .zoo-map__card__img {
-  background-image: url(../assets/img/card_panda.png);
+  background-image: url(../../../assets/img/card_panda.png);
 }
 
 .layout .main .zoo-map__card.show__card {
@@ -687,7 +687,7 @@ button {
 .layout .main .zoo-map__animal-map {
   height: 700px;
   width: 1223px;
-  background-image: url(../assets/img/world.png);
+  background-image: url(../../../assets/img/world.png);
 }
 
 .layout .main .zoo-map__animal-map__layout {
@@ -1012,6 +1012,7 @@ button {
   }
   .layout .main .wild-park__subtitle {
     font-size: 56px;
+    width: 497px;
   }
   .layout .main .wild-park__subtitle .dot::before {
     z-index: 1;
@@ -1026,6 +1027,10 @@ button {
   }
   .layout .main .wild-park__title-img {
     width: 400px;
+    height: 456px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 5px;
   }
   .layout .main .how-zoo-work__layout {
     padding: 100px 40px 100px 184px;
@@ -1035,6 +1040,10 @@ button {
   }
   .layout .main .how-zoo-work__title-img {
     width: 401px;
+    height: 585;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 5px;
   }
   .layout .main .how-zoo-work__text {
     margin: 35px 0 50px 0;
@@ -1244,11 +1253,11 @@ button {
     -webkit-transform: scale(0.75);
             transform: scale(0.75);
   }
-  .layout .footer {
-    padding: 40px;
-  }
   .layout .footer__layout {
-    padding: 100px 0 133px 0;
+    padding: 100px 40px 133px 40px;
+  }
+  .layout .footer__box {
+    max-width: 1200px;
   }
   .layout .footer__title {
     color: #fcfcfc;
@@ -1295,4 +1304,4 @@ button {
     height: 56px;
   }
 }
-/*# sourceMappingURL=homePage.css.map */
+/*# sourceMappingURL=homePageDesctop.css.map */

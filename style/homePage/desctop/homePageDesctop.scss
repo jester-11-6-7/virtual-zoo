@@ -317,28 +317,28 @@ button {
                     }
                 }
                 &:nth-of-type(1) {
-                    background-image: url("../assets/img/slider_red_panda.png");
+                    background-image: url("../../../assets/img/slider_red_panda.png");
                 }
                 &:nth-of-type(2) {
-                    background-image: url("../assets/img/slider_penguin.png");
+                    background-image: url("../../../assets/img/slider_penguin.png");
                 }
                 &:nth-of-type(3) {
-                    background-image: url("../assets/img/slider_squirrel.png");
+                    background-image: url("../../../assets/img/slider_squirrel.png");
                 }
                 &:nth-of-type(4) {
-                    background-image: url("../assets/img/slider_tiger.png");
+                    background-image: url("../../../assets/img/slider_tiger.png");
                 }
                 &:nth-of-type(5) {
-                    background-image: url("../assets/img/slider_panda.png");
+                    background-image: url("../../../assets/img/slider_panda.png");
                 }
                 &:nth-of-type(6) {
-                    background-image: url("../assets/img/slider_eagle.png");
+                    background-image: url("../../../assets/img/slider_eagle.png");
                 }
                 &:nth-of-type(7) {
-                    background-image: url("../assets/img/slider_gorilla.png");
+                    background-image: url("../../../assets/img/slider_gorilla.png");
                 }
                 &:nth-of-type(8) {
-                    background-image: url("../assets/img/slider_alligator.png");
+                    background-image: url("../../../assets/img/slider_alligator.png");
                 }
             }
         }
@@ -365,7 +365,7 @@ button {
                 &:nth-of-type(1) {
                     margin: 85px 0 0 201px;
                     &::after {
-                        content: url(../assets/img/arrow_1.png);
+                        content: url(../../../assets/img/arrow_1.png);
                         left: 57%;
                         position: absolute;
                         bottom: -85px;
@@ -374,7 +374,7 @@ button {
                 &:nth-of-type(2) {
                     margin: 129px 0 0 751px;
                     &::before {
-                        content: url(../assets/img/arrow_2.png);
+                        content: url(../../../assets/img/arrow_2.png);
                         left: -35%;
                         position: absolute;
                         top: 50%;
@@ -492,22 +492,22 @@ button {
                 opacity: 0;
                 &:nth-of-type(1) {
                     .zoo-map__card__img {
-                        background-image: url(../assets/img/card_eagle.png);
+                        background-image: url(../../../assets/img/card_eagle.png);
                     }
                 }
                 &:nth-of-type(2) {
                     .zoo-map__card__img {
-                        background-image: url(../assets/img/card_alligator.png);
+                        background-image: url(../../../assets/img/card_alligator.png);
                     }
                 }
                 &:nth-of-type(3) {
                     .zoo-map__card__img {
-                        background-image: url(../assets/img/card_gorilla.png);
+                        background-image: url(../../../assets/img/card_gorilla.png);
                     }
                 }
                 &:nth-of-type(4) {
                     .zoo-map__card__img {
-                        background-image: url(../assets/img/card_panda.png);
+                        background-image: url(../../../assets/img/card_panda.png);
                     }
                 }
                 &.show__card {
@@ -546,7 +546,7 @@ button {
             &__animal-map {
                 height: 700px;
                 width: 1223px;
-                background-image: url(../assets/img/world.png);
+                background-image: url(../../../assets/img/world.png);
             }
             &__animal-map__layout {
                 position: relative;
@@ -807,6 +807,7 @@ button {
                 }
                 &__subtitle {
                     font-size: 56px;
+                    width: 497px;
                     .dot {
                         &::before {
                             z-index: 1;
@@ -825,6 +826,9 @@ button {
                 }
                 &__title-img {
                     width: 400px;
+                    height: 456px;
+                    object-fit: cover;
+                    border-radius: 5px;
                 }
             }
             .how-zoo-work {
@@ -836,6 +840,9 @@ button {
                 }
                 &__title-img {
                     width: 401px;
+                    height: 585;
+                    object-fit: cover;
+                    border-radius: 5px;
                 }
                 &__text {
                     margin: 35px 0 50px 0;
@@ -941,7 +948,7 @@ button {
                     max-width: 1200px;
                     gap: 40px;
                 }
-                &__title{
+                &__title {
                     padding-bottom: 40px;
                 }
                 &__about-text {
@@ -1047,9 +1054,12 @@ button {
             }
         }
         .footer {
-            padding: $paddingLayout;
+            // padding: $paddingLayout;
             &__layout {
-                padding: 100px 0 133px 0;
+                padding: 100px 40px 133px 40px;
+            }
+            &__box {
+                max-width: 1200px;
             }
             &__title {
                 color: $footerTitleColor;

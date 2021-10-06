@@ -1,8 +1,14 @@
+const test1 = document.querySelector('.zoo-map__animal-map__layout').children
+const test2 = document.querySelector('.zoo-map__slider-bar').children
+console.log(test1)
+console.log(test2)
+
+
 // map
 function test(name) {
     const MAPMARKER = document.querySelectorAll('.zoo-map__marker')
     const CARD = document.querySelectorAll('.zoo-map__card')
-
+    console.log(MAPMARKER)
     for (let i = 0; i < CARD.length; i++) {
         CARD[i].classList.remove('show__card')
         MAPMARKER[i].classList.remove('zoo-map__marker__active')
@@ -14,10 +20,30 @@ function test(name) {
         }
     }
 };
+// передалай потом Н...Й!!!!! е...ан 
+function mobMaker(name) {
+    const MAPMARKER = document.querySelectorAll('.zoo-map__mob-marker')
+    const CARD = document.querySelectorAll('.zoo-map__card')
+
+    for (let i = 0; i < CARD.length; i++) {
+        CARD[i].classList.remove('show__card')
+        MAPMARKER[i].classList.remove('zoo-map__mob-marker__active')
+        if (MAPMARKER[i].dataset.animal === name) {
+            MAPMARKER[i].classList.add('zoo-map__mob-marker__active')
+        }
+        if (CARD[i].dataset.animal === name) {
+            CARD[i].classList.add('show__card')
+        }
+    }
+};
 
 // sliderFn
 function sliderFn() {
     let offset = 0
+
+    window.addEventListener('resize', () => {
+        offset = 0
+    })
 
     return function (direction, sliderChildren, sliderChildrenGap = 0, sliderContainer, slider, columns = 1,) {
         let row

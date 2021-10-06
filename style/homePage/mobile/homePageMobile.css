@@ -1,0 +1,1534 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.layout {
+  width: 100%;
+}
+
+.layout .header {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.layout .header__nav {
+  height: 88px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding: 0 20px;
+}
+
+.layout .header__logo svg {
+  width: 49px;
+  height: 38px;
+}
+
+.layout .header__menu {
+  width: 100%;
+  height: 100vh;
+  padding: 55px 0 55px 0;
+  position: absolute;
+  z-index: -1;
+  top: calc(-100vh + 90px);
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 24px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  overflow: hidden;
+  background-color: white;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.layout .header__menu.show {
+  top: 0;
+}
+
+.layout .header__menu a {
+  color: #000000;
+}
+
+.layout .header__soc__media {
+  display: none;
+}
+
+.layout .main {
+  width: 100%;
+}
+
+.layout .main .wild-park__layout {
+  max-width: 640px;
+  padding: 148px 20px 60px 20px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.layout .main .wild-park__title {
+  color: #626262;
+  padding: 0 0 45px 0;
+  font-size: 22px;
+}
+
+.layout .main .wild-park__subtitle {
+  color: #080029;
+  font-size: 42px;
+  font-family: "Merriweather", serif;
+  width: 315px;
+}
+
+.layout .main .wild-park__subtitle .dot {
+  position: relative;
+  z-index: -2;
+}
+
+.layout .main .wild-park__subtitle .dot::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 6px;
+  left: 4px;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.layout .main .wild-park__btn:nth-of-type(1) .btn {
+  background-color: #080029;
+  color: white;
+  margin-top: 40px;
+}
+
+.layout .main .wild-park__btn:nth-of-type(2) .btn {
+  display: none;
+}
+
+.layout .main .wild-park__title-img {
+  width: 263px;
+  height: 326px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.layout .main .how-zoo-work__layout {
+  max-width: 640px;
+  padding: 60px 20px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+  text-align: center;
+}
+
+.layout .main .how-zoo-work__title-img {
+  width: 390px;
+  height: 386px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.layout .main .how-zoo-work__title {
+  font-size: 22px;
+}
+
+.layout .main .how-zoo-work__subtitle {
+  padding: 0 25px;
+  text-align: center;
+  font-size: 26px;
+}
+
+.layout .main .how-zoo-work__text {
+  padding: 0 20px;
+  margin: 30px 0 40px 0;
+  font-size: 16px;
+}
+
+.layout .main .how-zoo-work__btn .btn {
+  color: white;
+  background-color: #0f0049;
+}
+
+.layout .main .famous-pets {
+  padding: 60px 0 80px 0;
+  background-color: #d9e8ff;
+}
+
+.layout .main .famous-pets__layout {
+  max-width: 1432px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 70px;
+}
+
+.layout .main .famous-pets__box {
+  max-width: 325px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.layout .main .famous-pets__subtitle {
+  font-size: 24px;
+}
+
+.layout .main .famous-pets__btn {
+  margin-top: 35px;
+}
+
+.layout .main .famous-pets__btn .btn-slider {
+  background-color: #181818;
+}
+
+.layout .main .famous-pets__slider {
+  width: 600px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  overflow: hidden;
+}
+
+.layout .main .famous-pets__slider-bar {
+  width: 820px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.layout .main .famous-pets__animal {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 105%;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  overflow: hidden;
+}
+
+.layout .main .famous-pets__animal:hover {
+  background-size: 110%;
+}
+
+.layout .main .famous-pets__animal a {
+  color: #fcfcfc;
+  line-height: 25px;
+  font-size: 16px;
+}
+
+.layout .main .famous-pets__animal a:hover {
+  color: #63cff0;
+}
+
+.layout .main .famous-pets__animal .animal-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
+  font-family: "Rubik", sans-serif;
+  color: #fcfcfc;
+  font-size: 18px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.layout .main .famous-pets__animal .animal-container:hover {
+  gap: 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.layout .main .famous-pets__animal .animal-container:hover .about-animal {
+  width: 129px;
+  height: 129px;
+}
+
+.layout .main .famous-pets__animal .animal-container:hover .about-animal::before {
+  display: none;
+}
+
+.layout .main .famous-pets__animal .animal-container:hover .about-animal__text {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+}
+
+.layout .main .famous-pets__animal .animal-container .about-animal {
+  width: 41px;
+  height: 41px;
+  padding: 23px;
+  position: relative;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  border-radius: 50%;
+  border: 2px solid #fcfcfc;
+}
+
+.layout .main .famous-pets__animal .animal-container .about-animal::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: 200;
+  font-size: 44px;
+  line-height: 145%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.layout .main .famous-pets__animal .animal-container .about-animal__text {
+  width: 102px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  font-size: 14px;
+  -webkit-transform: translate(-50%, 550%) scale(3);
+          transform: translate(-50%, 550%) scale(3);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  line-height: 154%;
+  cursor: default;
+}
+
+.layout .main .famous-pets__animal:nth-of-type(1) {
+  background-image: url("../../../assets/img/slider_red_panda.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(2) {
+  background-image: url("../../../assets/img/slider_penguin.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(3) {
+  background-image: url("../../../assets/img/slider_squirrel.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(4) {
+  background-image: url("../../../assets/img/slider_tiger.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(5) {
+  background-image: url("../../../assets/img/slider_panda.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(6) {
+  background-image: url("../../../assets/img/slider_eagle.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(7) {
+  background-image: url("../../../assets/img/slider_gorilla.png");
+}
+
+.layout .main .famous-pets__animal:nth-of-type(8) {
+  background-image: url("../../../assets/img/slider_alligator.png");
+}
+
+.layout .main .pay-and-feed {
+  padding: 80px 0 100px 0;
+}
+
+.layout .main .pay-and-feed__layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 0;
+  max-width: 640px;
+  margin: auto;
+}
+
+.layout .main .pay-and-feed__img {
+  width: 200px;
+}
+
+.layout .main .pay-and-feed__subtitle {
+  margin: 40px 0 25px 0;
+  padding: 0 40px;
+}
+
+.layout .main .pay-and-feed__title {
+  padding-bottom: 0;
+  padding-left: 0;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.layout .main .pay-and-feed__text {
+  text-align: center;
+}
+
+.layout .main .pay-and-feed__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 824px;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.layout .main .pay-and-feed__box:not(:nth-of-type(1)) {
+  margin-top: 70px;
+}
+
+.layout .main .pay-and-feed__content {
+  max-width: 428px;
+}
+
+.layout .main .testimonials {
+  background-color: #080029;
+  padding: 80px 0 103px 0;
+}
+
+.layout .main .testimonials__layout {
+  max-width: 640px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 80px;
+}
+
+.layout .main .testimonials__title, .layout .main .testimonials__subtitle, .layout .main .testimonials__more-reviews, .layout .main .testimonials__about-text {
+  color: #fcfcfc;
+}
+
+.layout .main .testimonials__about {
+  text-align: center;
+}
+
+.layout .main .testimonials__subtitle {
+  font-size: 28px;
+}
+
+.layout .main .testimonials__reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.layout .main .testimonials__about-text {
+  margin-top: 35px;
+  max-width: 392px;
+  font-weight: 300;
+  font-size: 16px;
+  color: #d3d3d3;
+}
+
+.layout .main .testimonials__btn .btn {
+  font-size: 18px;
+  margin-top: 50px;
+  color: #fcfcfc;
+  border-color: #fcfcfc;
+}
+
+.layout .main .testimonials__slider {
+  width: 454px;
+  overflow: hidden;
+  margin-top: 25px;
+  border-radius: 15px;
+}
+
+.layout .main .testimonials__slider-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.layout .main .testimonials__user-reviews {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 454px;
+  height: 235px;
+  background-color: #fcfcfc;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.layout .main .testimonials__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.layout .main .testimonials__user-avatar {
+  width: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #e3e3e3;
+}
+
+.layout .main .testimonials__user-name {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  color: #0b0b0b;
+  font-weight: 500;
+}
+
+.layout .main .testimonials__text {
+  color: #181818;
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+.layout .main .testimonials__btn {
+  margin-top: 30px;
+}
+
+.layout .main .testimonials__btn .btn-slider {
+  background-color: #fcfcfc;
+}
+
+.layout .main .zoo-map__layout {
+  max-width: 640px;
+  height: 826px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+
+.layout .main .zoo-map__title {
+  display: none;
+}
+
+.layout .main .zoo-map__animal-card {
+  width: 250px;
+  margin-top: 80px;
+}
+
+.layout .main .zoo-map__cards {
+  position: relative;
+  width: 250px;
+}
+
+.layout .main .zoo-map__card {
+  -webkit-box-shadow: 4px 12px 22px rgba(0, 0, 0, 0.06);
+          box-shadow: 4px 12px 22px rgba(0, 0, 0, 0.06);
+  border-radius: 15px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+  left: -388px;
+  width: 250px;
+  opacity: 0;
+}
+
+.layout .main .zoo-map__card:nth-of-type(1) .zoo-map__card__img {
+  background-image: url(../../../assets/img/card_eagle.png);
+}
+
+.layout .main .zoo-map__card:nth-of-type(2) .zoo-map__card__img {
+  background-image: url(../../../assets/img/card_alligator.png);
+}
+
+.layout .main .zoo-map__card:nth-of-type(3) .zoo-map__card__img {
+  background-image: url(../../../assets/img/card_gorilla.png);
+}
+
+.layout .main .zoo-map__card:nth-of-type(4) .zoo-map__card__img {
+  background-image: url(../../../assets/img/card_panda.png);
+}
+
+.layout .main .zoo-map__card.show__card {
+  left: 0px;
+  opacity: 1;
+}
+
+.layout .main .zoo-map__card__img {
+  width: 100%;
+  height: 160px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.layout .main .zoo-map__card__about-animal {
+  padding: 20px 20px 30px;
+  text-align: center;
+  height: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+}
+
+.layout .main .zoo-map__card__subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.layout .main .zoo-map__card__about-text {
+  color: #747474;
+  line-height: 154%;
+  font-size: 14px;
+}
+
+.layout .main .zoo-map__card__link {
+  font-size: 18px;
+  font-family: Rubik;
+  color: #3888ff;
+}
+
+.layout .main .zoo-map__animal-map {
+  margin: 290px 0 80px 0;
+  width: 600px;
+  height: 346px;
+  background-image: url(../../../assets/img/world.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.layout .main .zoo-map__animal-map__layout {
+  position: relative;
+  height: 100%;
+}
+
+.layout .main .zoo-map__marker {
+  position: absolute;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  padding-bottom: 70px;
+}
+
+.layout .main .zoo-map__marker g path {
+  stroke: transparent;
+}
+
+.layout .main .zoo-map__marker:nth-of-type(1) {
+  top: 42px;
+  left: 32px;
+}
+
+.layout .main .zoo-map__marker:nth-of-type(2) {
+  top: 50px;
+  left: 97px;
+}
+
+.layout .main .zoo-map__marker:nth-of-type(3) {
+  top: 100px;
+  left: 237px;
+}
+
+.layout .main .zoo-map__marker:nth-of-type(4) {
+  top: 35px;
+  left: 405px;
+}
+
+.layout .main .zoo-map__marker:hover:not(.zoo-map__marker__active) {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.layout .main .zoo-map__marker__active {
+  -webkit-transform: scale(0.55);
+          transform: scale(0.55);
+}
+
+.layout .main .zoo-map__marker__active g .marker__color {
+  stroke: #609fff;
+}
+
+.layout .footer {
+  padding: 0 20px;
+  width: 100%;
+  background-color: #0b0b0b;
+}
+
+.layout .footer__box {
+  margin: auto;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #bcbcbc;
+  max-width: 577px;
+}
+
+.layout .footer__layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 60px;
+  padding: 80px 0 60px 0;
+}
+
+.layout .footer__layout a {
+  color: #bcbcbc;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.layout .footer__layout a:hover {
+  color: #0099ff;
+}
+
+.layout .footer__title {
+  color: #fcfcfc;
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 0.115em;
+}
+
+.layout .footer__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 127px;
+  width: 100%;
+}
+
+.layout .footer__icons svg {
+  width: 95px;
+  height: 74px;
+}
+
+.layout .footer__collaboration {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+  font-size: 16px;
+}
+
+.layout .footer__collaboration .yem-digital {
+  width: 93px;
+}
+
+.layout .footer__collaboration .rs-school {
+  width: 102px;
+}
+
+.layout .footer__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  font-weight: 400;
+}
+
+.layout .footer__navigation .navigation__link:nth-of-type(1) {
+  letter-spacing: 0.115em;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #fcfcfc;
+}
+
+.layout .footer__volunteer {
+  max-width: 339px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.layout .footer__btn .btn {
+  border-color: #fcfcfc;
+  color: #fcfcfc;
+  padding: 20px 0;
+  width: 318px;
+}
+
+.layout .footer__soc-media {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  gap: 65px;
+}
+
+.layout .footer__copyright {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid #747474;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.btn {
+  border-radius: 5px;
+  border: 2px solid transparent;
+  padding: 16px 60px;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+}
+
+.title {
+  color: #0b0b0b;
+  font-size: 20px;
+  font-family: "Rubik", sans-serif;
+  padding: 0 0 35px 0;
+  letter-spacing: 0.115em;
+  font-weight: 400;
+}
+
+.subtitle {
+  color: #080029;
+  font-family: "Merriweather", serif;
+  font-size: 25px;
+  text-align: center;
+  line-height: 145%;
+}
+
+.text {
+  font-size: 18px;
+  color: #747474;
+  line-height: 154%;
+  font-family: Rubik;
+  line-height: 27.72px;
+}
+
+.btn-slider {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.svg-icon-hover:hover svg path {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  fill: #0099ff;
+}
+
+.mobile-hidden {
+  display: none;
+}
+
+.burger-menu {
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.burger-menu rect {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.burger-menu svg {
+  overflow: visible;
+  width: 37px;
+  outline: none;
+}
+
+.burger-menu.closed rect:nth-of-type(1) {
+  width: 35;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transform: translateY(-3.5px) translateX(1px) rotate(45deg);
+          transform: translateY(-3.5px) translateX(1px) rotate(45deg);
+}
+
+.burger-menu.closed rect:nth-of-type(3) {
+  width: 35;
+  -webkit-transform: translateY(3.5px) rotate(-45deg);
+          transform: translateY(3.5px) rotate(-45deg);
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+}
+
+.burger-menu.closed rect:nth-of-type(2) {
+  width: 0px;
+}
+
+.slider-btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.zoo-map__animal-card-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 639px) {
+  .layout {
+    width: 100%;
+  }
+  .layout .header__nav {
+    height: 59px;
+    padding: 0 10px;
+  }
+  .layout .header__logo svg {
+    width: 38px;
+    height: 29px;
+  }
+  .layout .header__menu {
+    top: calc(-100vh + 61px);
+  }
+  .layout .main .wild-park__layout {
+    padding: 128px 10px 0 10px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .layout .main .wild-park__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .layout .main .wild-park__title {
+    color: #626262;
+    padding: 0 0 35px 0;
+    font-size: 22px;
+  }
+  .layout .main .wild-park__subtitle {
+    color: #080029;
+    width: 320px;
+    text-align: center;
+  }
+  .layout .main .wild-park__btn:nth-of-type(1) .btn {
+    background-color: #080029;
+    color: white;
+    margin-top: 40px;
+  }
+  .layout .main .wild-park__title-img {
+    display: none;
+  }
+  .layout .main .how-zoo-work__layout {
+    max-width: 640px;
+    padding: 61px 10px;
+    gap: 60px;
+  }
+  .layout .main .how-zoo-work__box {
+    max-width: 294px;
+  }
+  .layout .main .how-zoo-work__title-img {
+    width: 297px;
+    height: 293px;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .layout .main .how-zoo-work__title {
+    font-size: 16px;
+  }
+  .layout .main .how-zoo-work__subtitle {
+    padding: 0 0;
+    text-align: center;
+    font-size: 20px;
+  }
+  .layout .main .how-zoo-work__text {
+    padding: 0 0;
+    margin: 30px 0 40px 0;
+    font-size: 14px;
+  }
+  .layout .main .famous-pets {
+    padding: 60px 0 60px 0;
+    background-color: #d9e8ff;
+  }
+  .layout .main .famous-pets__layout {
+    max-width: 1432px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 50px;
+  }
+  .layout .main .famous-pets__box {
+    max-width: 325px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .layout .main .famous-pets__subtitle {
+    font-size: 20px;
+  }
+  .layout .main .famous-pets__btn {
+    margin-top: 30px;
+  }
+  .layout .main .famous-pets__btn .btn-slider {
+    background-color: #181818;
+  }
+  .layout .main .famous-pets__slider {
+    width: 300px;
+  }
+  .layout .main .famous-pets__slider-bar {
+    width: 620px;
+    gap: 20px;
+  }
+  .layout .main .famous-pets__animal {
+    width: 140px;
+    height: 140px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 105%;
+    border-radius: 5px;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    overflow: hidden;
+  }
+  .layout .main .famous-pets__animal:hover {
+    background-size: 110%;
+  }
+  .layout .main .famous-pets__animal a {
+    color: #fcfcfc;
+    line-height: 25px;
+    font-size: 14px;
+  }
+  .layout .main .famous-pets__animal a:hover {
+    color: #63cff0;
+  }
+  .layout .main .famous-pets__animal .animal-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 0;
+    gap: 2px;
+    font-size: 16px;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+  }
+  .layout .main .famous-pets__animal .animal-container:hover {
+    gap: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  .layout .main .famous-pets__animal .animal-container:hover .about-animal {
+    width: 100px;
+    height: 100px;
+  }
+  .layout .main .famous-pets__animal .animal-container:hover .about-animal::before {
+    display: none;
+  }
+  .layout .main .famous-pets__animal .animal-container:hover .about-animal__text {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+  .layout .main .famous-pets__animal .animal-container .about-animal {
+    width: 41px;
+    height: 41px;
+    position: relative;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    border-radius: 50%;
+    border: 1px solid #fcfcfc;
+  }
+  .layout .main .famous-pets__animal .animal-container .about-animal::before {
+    font-size: 18px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .layout .main .famous-pets__animal .animal-container .about-animal__text {
+    width: 102px;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    font-size: 12px;
+    -webkit-transform: translate(-50%, 550%) scale(3);
+            transform: translate(-50%, 550%) scale(3);
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    line-height: 154%;
+    cursor: default;
+  }
+  .layout .main .pay-and-feed {
+    padding: 60px 0 60px 0;
+  }
+  .layout .main .pay-and-feed__layout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+    max-width: 294px;
+    margin: auto;
+  }
+  .layout .main .pay-and-feed__img {
+    width: 160px;
+  }
+  .layout .main .pay-and-feed__subtitle {
+    margin: 40px 0 20px 0;
+    padding: 0 40px;
+  }
+  .layout .main .pay-and-feed__title {
+    padding-bottom: 0;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .layout .main .pay-and-feed__text {
+    text-align: center;
+  }
+  .layout .main .pay-and-feed__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 824px;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .layout .main .pay-and-feed__box:not(:nth-of-type(1)) {
+    margin-top: 50px;
+  }
+  .layout .main .pay-and-feed__content {
+    max-width: 428px;
+  }
+  .layout .main .testimonials {
+    background-color: #080029;
+    padding: 80px 0 60px 0;
+  }
+  .layout .main .testimonials__layout {
+    max-width: 300px;
+    gap: 50px;
+  }
+  .layout .main .testimonials__title {
+    padding-bottom: 30px;
+  }
+  .layout .main .testimonials__subtitle {
+    font-size: 20px;
+  }
+  .layout .main .testimonials__about-text {
+    margin-top: 20px;
+    max-width: 392px;
+    font-size: 14px;
+  }
+  .layout .main .testimonials__btn .btn {
+    font-size: 14px;
+    margin-top: 40px;
+  }
+  .layout .main .testimonials__slider {
+    width: 300px;
+    margin-top: 25px;
+    border-radius: 15px;
+  }
+  .layout .main .testimonials__slider-bar {
+    gap: 40px;
+  }
+  .layout .main .testimonials__user-reviews {
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+  }
+  .layout .main .testimonials__user {
+    gap: 20px;
+  }
+  .layout .main .testimonials__user-avatar {
+    width: 46px;
+  }
+  .layout .main .testimonials__user-name {
+    font-size: 16px;
+  }
+  .layout .main .testimonials__text {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .layout .main .testimonials__btn {
+    margin-top: 30px;
+  }
+  .layout .main .zoo-map__layout {
+    max-width: 640px;
+    height: auto;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 25px;
+  }
+  .layout .main .zoo-map__slider-btn {
+    width: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .layout .main .zoo-map__slider-btn:nth-of-type(2) {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .layout .main .zoo-map__slider-btn:nth-of-type(1) {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .layout .main .zoo-map__animal-map {
+    display: none;
+  }
+  .layout .main .zoo-map__animal-marks-mobile {
+    margin-top: 400px;
+    max-width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 60px;
+  }
+  .layout .main .zoo-map__mob-marker {
+    display: block;
+  }
+  .layout .main .zoo-map__mob-marker:hover rect {
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    stroke: rgba(0, 153, 255, 0.6);
+  }
+  .layout .main .zoo-map__mob-marker.zoo-map__mob-marker__active rect {
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+    stroke: rgba(0, 153, 255, 0.6);
+  }
+  .layout .main .zoo-map__slider-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+  }
+  .layout .footer {
+    padding: 0 10px;
+    width: 100%;
+  }
+  .layout .footer__box {
+    margin: auto;
+  }
+  .layout .footer__layout {
+    width: 300px;
+    padding: 60px 0 36px 0;
+  }
+  .layout .footer__icons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 75px;
+    width: auto;
+  }
+  .layout .footer__icons svg {
+    width: 60px;
+    height: 47px;
+  }
+  .layout .footer__collaboration {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 20px;
+  }
+  .layout .footer__collaboration .yem-digital {
+    width: 80px;
+  }
+  .layout .footer__collaboration .rs-school {
+    width: 84px;
+  }
+  .layout .footer__navigation {
+    gap: 21px;
+    margin-right: 31px;
+    font-size: 14px;
+  }
+  .layout .footer__navigation .navigation__link:nth-of-type(1) {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  .layout .footer__supp {
+    text-align: center;
+  }
+  .layout .footer__volunteer {
+    gap: 30px;
+    width: 300px;
+  }
+  .layout .footer__volunteer p {
+    font-size: 14px;
+    line-height: 154%;
+  }
+  .layout .footer__btn .btn {
+    width: 100%;
+  }
+  .layout .footer__soc-media {
+    margin-top: 37px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .layout .footer__copyright {
+    gap: 8px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 11px;
+  }
+  .btn {
+    font-size: 14px;
+  }
+  .title {
+    text-align: center;
+    padding: 0 0 35px 0;
+    font-size: 16px;
+  }
+  .subtitle {
+    font-size: 20px;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .zoo-map__animal-card-mobile {
+    display: block;
+  }
+}
+/*# sourceMappingURL=homePageMobile.css.map */
