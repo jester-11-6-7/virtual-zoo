@@ -114,8 +114,9 @@ button {
                         content: "";
                         position: absolute;
                         z-index: 1;
-                        top: 6px;
-                        left: 4px;
+                        top: 3px;
+                        left: 50%;
+                        transform: translateX(-50%);
                         height: 8px;
                         width: 8px;
                         border-radius: 50%;
@@ -678,7 +679,6 @@ button {
             gap: 30px;
         }
         &__btn {
-            // отступ 10px
             .btn {
                 border-color: $footerTitleColor;
                 color: $footerTitleColor;
@@ -696,7 +696,6 @@ button {
             padding: 20px 0;
             display: flex;
             justify-content: space-between;
-            // что-то сделать с border
             border-top: 1px solid #747474;
             font-weight: 400;
             font-size: 14px;
@@ -793,7 +792,7 @@ button {
     gap: 20px;
 }
 
-.zoo-map__animal-card-mobile{
+.zoo-map__animal-marks-mobile{
     display: none;
 }
 
@@ -1103,36 +1102,41 @@ button {
                         justify-content: flex-start;
                     }
                 }
+                &__animal-card{
+                    margin-top: 60px;
+                }
                 &__animal-map {
                     display: none;
                 }
                 &__animal-marks-mobile{
-                    margin-top: 400px;
+                    margin-top: 405px;
                     max-width: 300px;
                     display: flex; 
                     margin-bottom: 60px;
                 }
                 &__mob-marker{
                     display: block;
+                    cursor: pointer;
                     &:hover{
                         rect{
-                            transition-duration: $animationSpeed;
-                            stroke:rgba(0, 153, 255, 0.6)
+                            stroke:rgba($color: #609FFF, $alpha: 0.6);
                         }
                     }
                     &.zoo-map__mob-marker__active{
                         rect{
-                            transition-duration: $animationSpeed;
-                            stroke:rgba(0, 153, 255)
+                            stroke:#609FFF;
                         }
+                    }
+                    rect{
+                        transition-duration: $animationSpeed;
                     }
                 }
                 &__slider-bar{
-                    display: flex;
+                    display: flex; 
                     gap: 20px;
                 }
             }
-        }
+        } 
         .footer {
             padding: 0 $paddingLayout;
             width: 100%;

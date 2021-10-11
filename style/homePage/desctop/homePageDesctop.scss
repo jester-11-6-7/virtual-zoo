@@ -1,6 +1,6 @@
 $fontSizeText: 18px;
 $fontSizeTitle: 26px;
-$animationSpeed: 0.3s;
+$animationSpeed: 0.4s;
 
 $darkBlue: #080029;
 $activeColor: rgb(0, 153, 255);
@@ -8,6 +8,7 @@ $titleColor: #626262;
 $colorText: #747474;
 $btnColor: #0f0049;
 $btnSliderColorDark: #181818;
+$btnBgActive: #150068;
 $wightBlue: #d9e8ff;
 $blue: #0f0049;
 $footerBgColor: #0b0b0b;
@@ -39,7 +40,7 @@ button {
     width: 100%;
     .header {
         width: 100%;
-        position: absolute;
+        position: fixed;
         z-index: 1000;
         left: 0;
         top: 25px;
@@ -74,10 +75,9 @@ button {
                 flex-direction: column;
                 gap: 45px;
             }
-            .soc__media__closed {
+            .soc__media__closed__btn {
                 margin: 9vh 0;
             }
-
             &.open {
                 height: 90vh;
             }
@@ -169,17 +169,31 @@ button {
             }
             &__btn:nth-of-type(1) {
                 .btn {
-                    background-color: $darkBlue;
+                    border: 2px solid $btnColor;
+                    background-color: $btnColor;
                     color: white;
                     margin-right: 62px;
                     margin-top: 60px;
+                    &:hover{
+                        background-color: $darkBlue;
+                        border-color: $darkBlue;
+                    }
+                    &:active{
+                        background-color: $btnBgActive;
+                        border-color: $btnBgActive;
+                    }
                 }
             }
             &__btn:nth-of-type(2) {
                 .btn {
-                    border: 2px solid $darkBlue;
-                    background-color: white;
-                    color: $darkBlue;
+                    border: 2px solid $btnColor;
+                    color: $btnColor;
+                    &:hover{
+                        border-color: $darkBlue;
+                    }
+                    &:active{
+                        border-color: blue;
+                    }
                 }
             }
         }
@@ -199,8 +213,19 @@ button {
             }
             &__btn {
                 .btn {
-                    color: white;
+                    border: 2px solid $btnColor;
                     background-color: $btnColor;
+                    color: white;
+                    margin-right: 62px;
+                    margin-top: 60px;
+                    &:hover{
+                        background-color: $darkBlue;
+                        border-color: $darkBlue;
+                    }
+                    &:active{
+                        background-color: $btnBgActive;
+                        border-color: $btnBgActive;
+                    }
                 }
             }
         }
@@ -221,6 +246,15 @@ button {
                 margin-top: 55px;
                 .btn-slider {
                     background-color: $btnSliderColorDark;
+                    border-color: $btnSliderColorDark;
+                    transition-duration: $animationSpeed;
+                    border: 2px solid black;
+                    &:hover{
+                        background-color: $wightBlue;
+                        path{
+                            fill: black;
+                        }
+                    }
                 }
             }
             &__slider {
@@ -414,6 +448,14 @@ button {
                     margin-top: 80px;
                     color: $footerTitleColor;
                     border-color: $footerTitleColor;
+                    &:hover{
+                        background-color: white;
+                        color: black;
+                    }
+                    &:active{
+                        border-color: $activeColor;
+                        color: $activeColor;
+                    }
                 }
             }
             &__slider {
@@ -460,6 +502,15 @@ button {
                 margin-top: 30px;
                 .btn-slider {
                     background-color: $footerTitleColor;
+                    transition-duration: $animationSpeed;
+                    border: 2px solid white;
+                    &:hover{
+                        border: 2px solid white;
+                        background-color: $darkBlue;
+                        path{
+                            fill: white;
+                        }
+                    }
                 }
             }
         }
@@ -662,6 +713,10 @@ button {
                 color: $footerTitleColor;
                 padding: 20px 0;
                 width: 100%;
+                &:hover{
+                    background-color: $footerTitleColor;
+                    color: black;
+                }
             }
         }
         &__soc-media {
@@ -684,6 +739,7 @@ button {
     border-radius: 5px;
     border: 2px solid transparent;
     padding: 20px 75px;
+    transition-duration: $animationSpeed;
     font-size: 18px;
     font-family: $Rubik;
 }
@@ -748,10 +804,6 @@ button {
                 .soc__media__links {
                     gap: 45px;
                 }
-                .soc__media__closed {
-                    margin: 9vh 0;
-                }
-
                 &.open {
                     height: 90vh;
                 }

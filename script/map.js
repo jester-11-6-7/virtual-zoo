@@ -1,35 +1,28 @@
-const test1 = document.querySelector('.zoo-map__animal-map__layout').children
-const test2 = document.querySelector('.zoo-map__slider-bar').children
-console.log(test1)
-console.log(test2)
+const logo = document.querySelector('.header__logo');
+const socMediaMenu = document.querySelector('.header__soc__media');
+const socMediaMenuBtn = document.querySelector('.soc__media__closed__btn');
 
+logo.addEventListener('mouseover', () => {
+    socMediaMenu.classList.add('open')
+});
+
+socMediaMenuBtn.addEventListener('click', () => {
+    socMediaMenu.classList.remove('open')
+});
 
 // map
-function test(name) {
-    const MAPMARKER = document.querySelectorAll('.zoo-map__marker')
-    const CARD = document.querySelectorAll('.zoo-map__card')
-    console.log(MAPMARKER)
+function animalCardFn(name) {
+    const MAPMARKER = document.querySelectorAll('.zoo-map__marker'),
+        MAPMARKERMOB = document.querySelectorAll('.zoo-map__mob-marker'),
+        CARD = document.querySelectorAll('.zoo-map__card');
+    let TARGETOBJECT = window.innerWidth > 639 ? MAPMARKER : MAPMARKERMOB
+    const targetObjectClass = TARGETOBJECT[0].classList[0]
+    
     for (let i = 0; i < CARD.length; i++) {
         CARD[i].classList.remove('show__card')
-        MAPMARKER[i].classList.remove('zoo-map__marker__active')
-        if (MAPMARKER[i].dataset.animal === name) {
-            MAPMARKER[i].classList.add('zoo-map__marker__active')
-        }
-        if (CARD[i].dataset.animal === name) {
-            CARD[i].classList.add('show__card')
-        }
-    }
-};
-// передалай потом Н...Й!!!!! е...ан 
-function mobMaker(name) {
-    const MAPMARKER = document.querySelectorAll('.zoo-map__mob-marker')
-    const CARD = document.querySelectorAll('.zoo-map__card')
-
-    for (let i = 0; i < CARD.length; i++) {
-        CARD[i].classList.remove('show__card')
-        MAPMARKER[i].classList.remove('zoo-map__mob-marker__active')
-        if (MAPMARKER[i].dataset.animal === name) {
-            MAPMARKER[i].classList.add('zoo-map__mob-marker__active')
+        TARGETOBJECT[i].classList.remove(`${targetObjectClass}__active`)
+        if (TARGETOBJECT[i].dataset.animal === name) {
+            TARGETOBJECT[i].classList.add(`${targetObjectClass}__active`)
         }
         if (CARD[i].dataset.animal === name) {
             CARD[i].classList.add('show__card')
@@ -39,19 +32,19 @@ function mobMaker(name) {
 
 // sliderFn
 function sliderFn() {
-    let offset = 0
+    let offset = 0;
 
     window.addEventListener('resize', () => {
         offset = 0
-    })
+    });
 
     return function (direction, sliderChildren, sliderChildrenGap = 0, sliderContainer, slider, columns = 1,) {
-        let row
+        let row;
         for (let i = 1; i < 10; i++) {
             if ((sliderChildren[0].offsetWidth * i) + (sliderChildrenGap * (i - 1)) === slider.offsetWidth) {
                 row = i
             }
-        }
+        };
 
         let sliderElemsWidth = +(direction + sliderChildren[0].offsetWidth),
             sliderContainerGap = +(direction + parseFloat(sliderChildrenGap)),
@@ -64,7 +57,7 @@ function sliderFn() {
 
         if (offset + oneShift < 1 && offset + oneShift >= -sliderWidth) {
             sliderContainer.style.transform = `translateX(${offset += oneShift}px)`
-        }
+        };
     }
 };
 
@@ -88,7 +81,6 @@ function sliderFn() {
         })
     }
 }();
-
 
 !function animalSliderFn() {
     const btn = document.querySelector('.famous-pets__btn-slider').children,

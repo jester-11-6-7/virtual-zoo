@@ -129,8 +129,10 @@ button {
   content: "";
   position: absolute;
   z-index: 1;
-  top: 6px;
-  left: 4px;
+  top: 3px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   height: 8px;
   width: 8px;
   border-radius: 50%;
@@ -1040,7 +1042,7 @@ button {
   gap: 20px;
 }
 
-.zoo-map__animal-card-mobile {
+.zoo-map__animal-marks-mobile {
   display: none;
 }
 
@@ -1403,11 +1405,14 @@ button {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+  .layout .main .zoo-map__animal-card {
+    margin-top: 60px;
+  }
   .layout .main .zoo-map__animal-map {
     display: none;
   }
   .layout .main .zoo-map__animal-marks-mobile {
-    margin-top: 400px;
+    margin-top: 405px;
     max-width: 300px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1416,16 +1421,17 @@ button {
   }
   .layout .main .zoo-map__mob-marker {
     display: block;
+    cursor: pointer;
   }
   .layout .main .zoo-map__mob-marker:hover rect {
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    stroke: rgba(0, 153, 255, 0.6);
+    stroke: rgba(96, 159, 255, 0.6);
   }
   .layout .main .zoo-map__mob-marker.zoo-map__mob-marker__active rect {
+    stroke: #609FFF;
+  }
+  .layout .main .zoo-map__mob-marker rect {
     -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
-    stroke: rgba(0, 153, 255, 0.6);
   }
   .layout .main .zoo-map__slider-bar {
     display: -webkit-box;
