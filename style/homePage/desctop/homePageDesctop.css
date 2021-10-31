@@ -128,8 +128,12 @@ button {
   display: block;
 }
 
-.layout .header__list:hover a {
+.layout .header__list:not(.landing-page):hover a {
   color: #0099ff;
+}
+
+.layout .header__list.landing-page {
+  font-weight: 500;
 }
 
 .layout .header__profile {
@@ -185,7 +189,9 @@ button {
   position: absolute;
   z-index: 1;
   top: 13px;
-  left: 6px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   height: 18px;
   width: 18px;
   border-radius: 50%;
@@ -1042,16 +1048,6 @@ button {
     margin-left: calc(90px + 5.5%);
     font-size: 18px;
   }
-  .layout .header__list a {
-    color: #080029;
-    font-family: "Rubik", sans-serif;
-    -webkit-transition-duration: 0.4s;
-            transition-duration: 0.4s;
-    display: block;
-  }
-  .layout .header__list:hover a {
-    color: #0099ff;
-  }
   .layout .header__profile {
     height: 42px;
     width: 42px;
@@ -1085,8 +1081,7 @@ button {
   }
   .layout .main .wild-park__subtitle .dot::before {
     z-index: 1;
-    top: 9px;
-    left: 5px;
+    top: 8px;
     height: 11px;
     width: 11px;
   }

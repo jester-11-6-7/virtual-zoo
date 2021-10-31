@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online-zoo</title>
     <link rel="shortcut icon" href="assets/icon/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style/preLoader/preLoader.css">
     <link rel="stylesheet" href="style/homePage/mobile/homePageMobile.css" media="screen and (max-width: 1199px)">
     <link rel="stylesheet" href="style/homePage/desctop/homePageDesctop.css" media="screen and (min-width: 1200px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +23,9 @@
 
 <body>
     <div class="layout">
+        <div class="contentLoad">
+            <div class="preloader"></div>
+        </div>
         <header class="header">
             <nav class="header__nav">
                 <div class="header__logo">
@@ -42,7 +46,7 @@
                     </a>
                 </div>
                 <ul class="header__menu">
-                    <li class="header__list"><a href="#">About</a></li>
+                    <li class="header__list landing-page"><a href="#">About</a></li>
                     <li class="header__list"><a href="#">Map</a></li>
                     <li class="header__list"><a href="pages/errorPage.html">Zoos</a></li>
                     <li class="header__list"><a href="#">Contact us</a></li>
@@ -772,22 +776,22 @@
                             Navigation
                         </li>
                         <li class="navigation__link">
-                            <a href="../index.html">Main page</a>
+                            <a href="index.html">Main page</a>
                         </li>
                         <li class="navigation__link">
-                            <a href="../index.html#how-zoo-work">About us</a>
+                            <a href="#how-zoo-work">About us</a>
                         </li>
                         <li class="navigation__link">
-                            <a href="../index.html#famous-pets">Pets i zoo</a>
+                            <a href="#famous-pets">Pets i zoo</a>
                         </li>
                         <li class="navigation__link">
-                            <a href="../index.html">Instruction</a>
+                            <a href="#pay-and-feed">Instruction</a>
                         </li>
                         <li class="navigation__link">
-                            <a href="../index.html">Testimonials</a>
+                            <a href="#testimonials">Testimonials</a>
                         </li>
                         <li class="navigation__link">
-                            <a href="../index.html">Animal map</a>
+                            <a href="#zoo-map">Animal map</a>
                         </li>
                     </ul>
                     <div class="footer__supp">
@@ -820,6 +824,7 @@
             </section>
         </footer>
     </div>
+    <script src="script/contentLoaded.js"></script>
     <script src="script/burgerMenu.js"></script>
     <script src="script/map.js"></script>
 </body>

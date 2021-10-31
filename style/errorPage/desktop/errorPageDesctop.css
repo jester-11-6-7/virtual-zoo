@@ -64,8 +64,12 @@
   display: block;
 }
 
-.layout .header__list:hover a {
+.layout .header__list:not(.landing-page):hover a {
   color: #028ddd;
+}
+
+.layout .header__list.landing-page {
+  font-weight: 500;
 }
 
 .layout .header__profile {
@@ -372,16 +376,6 @@
     gap: 7.5%;
     margin-left: calc(90px + 5.5%);
     font-size: 18px;
-  }
-  .layout .header__list a {
-    color: #080029;
-    font-family: "Rubik", sans-serif;
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    display: block;
-  }
-  .layout .header__list:hover a {
-    color: #028ddd;
   }
   .layout .header__profile {
     height: 52px;

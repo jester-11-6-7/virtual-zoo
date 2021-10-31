@@ -70,8 +70,11 @@ $Rubik: "Rubik", sans-serif;
                 transition-duration: $animationSpeed;
                 display: block;
             }
-            &:hover a {
+            &:not(.landing-page):hover a {
                 color: $activeColor;
+            }
+            &.landing-page {
+                font-weight: 500;
             }
         }
         &__profile {
@@ -304,17 +307,6 @@ $Rubik: "Rubik", sans-serif;
                 gap: 7.5%;
                 margin-left: calc(90px + 5.5%);
                 font-size: $fontSizeText;
-            }
-            &__list {
-                a {
-                    color: $darkBlue;
-                    font-family: $Rubik;
-                    transition-duration: $animationSpeed;
-                    display: block;
-                }
-                &:hover a {
-                    color: $activeColor;
-                }
             }
             &__profile {
                 height: 52px;

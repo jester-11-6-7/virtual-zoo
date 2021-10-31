@@ -17,7 +17,7 @@ function animalCardFn(name) {
         CARD = document.querySelectorAll('.zoo-map__card');
     let TARGETOBJECT = window.innerWidth > 639 ? MAPMARKER : MAPMARKERMOB
     const targetObjectClass = TARGETOBJECT[0].classList[0]
-    
+
     for (let i = 0; i < CARD.length; i++) {
         CARD[i].classList.remove('show__card')
         TARGETOBJECT[i].classList.remove(`${targetObjectClass}__active`)
@@ -107,8 +107,8 @@ function sliderFn() {
 
 // card animation
 !function animateCardAnimal() {
-    let animalName = ''
-    let sliderElems = document.querySelectorAll('.animal-container')
+    let animalName = '',
+        sliderElems = document.querySelectorAll('.animal-container')
 
     return function () {
         for (let i = 0; i < sliderElems.length; i++) {

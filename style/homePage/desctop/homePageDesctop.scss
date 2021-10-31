@@ -2,8 +2,7 @@ $fontSizeText: 18px;
 $fontSizeTitle: 26px;
 $animationSpeed: 0.4s;
 
-$darkBlue: #080029;
-$activeColor: rgb(0, 153, 255);
+$darkBlue: #080029;$activeColor: rgb(0, 153, 255);
 $titleColor: #626262;
 $colorText: #747474;
 $btnColor: #0f0049;
@@ -115,8 +114,11 @@ button {
                 transition-duration: $animationSpeed;
                 display: block;
             }
-            &:hover a {
+            &:not(.landing-page):hover a {
                 color: $activeColor;
+            }
+            &.landing-page {
+                font-weight: 500;
             }
         }
         &__profile {
@@ -159,7 +161,8 @@ button {
                         position: absolute;
                         z-index: 1;
                         top: 13px;
-                        left: 6px;
+                        left: 50%;
+                        transform: translateX(-50%);
                         height: 18px;
                         width: 18px;
                         border-radius: 50%;
@@ -174,11 +177,11 @@ button {
                     color: white;
                     margin-right: 62px;
                     margin-top: 60px;
-                    &:hover{
+                    &:hover {
                         background-color: $darkBlue;
                         border-color: $darkBlue;
                     }
-                    &:active{
+                    &:active {
                         background-color: $btnBgActive;
                         border-color: $btnBgActive;
                     }
@@ -188,10 +191,10 @@ button {
                 .btn {
                     border: 2px solid $btnColor;
                     color: $btnColor;
-                    &:hover{
+                    &:hover {
                         border-color: $darkBlue;
                     }
-                    &:active{
+                    &:active {
                         border-color: blue;
                     }
                 }
@@ -218,11 +221,11 @@ button {
                     color: white;
                     margin-right: 62px;
                     margin-top: 60px;
-                    &:hover{
+                    &:hover {
                         background-color: $darkBlue;
                         border-color: $darkBlue;
                     }
-                    &:active{
+                    &:active {
                         background-color: $btnBgActive;
                         border-color: $btnBgActive;
                     }
@@ -249,9 +252,9 @@ button {
                     border-color: $btnSliderColorDark;
                     transition-duration: $animationSpeed;
                     border: 2px solid black;
-                    &:hover{
+                    &:hover {
                         background-color: $wightBlue;
-                        path{
+                        path {
                             fill: black;
                         }
                     }
@@ -448,11 +451,11 @@ button {
                     margin-top: 80px;
                     color: $footerTitleColor;
                     border-color: $footerTitleColor;
-                    &:hover{
+                    &:hover {
                         background-color: white;
                         color: black;
                     }
-                    &:active{
+                    &:active {
                         border-color: $activeColor;
                         color: $activeColor;
                     }
@@ -504,10 +507,10 @@ button {
                     background-color: $footerTitleColor;
                     transition-duration: $animationSpeed;
                     border: 2px solid white;
-                    &:hover{
+                    &:hover {
                         border: 2px solid white;
                         background-color: $darkBlue;
-                        path{
+                        path {
                             fill: white;
                         }
                     }
@@ -713,7 +716,7 @@ button {
                 color: $footerTitleColor;
                 padding: 20px 0;
                 width: 100%;
-                &:hover{
+                &:hover {
                     background-color: $footerTitleColor;
                     color: black;
                 }
@@ -821,17 +824,6 @@ button {
                 margin-left: calc(90px + 5.5%);
                 font-size: $fontSizeText;
             }
-            &__list {
-                a {
-                    color: $darkBlue;
-                    font-family: $Rubik;
-                    transition-duration: $animationSpeed;
-                    display: block;
-                }
-                &:hover a {
-                    color: $activeColor;
-                }
-            }
             &__profile {
                 height: 42px;
                 width: 42px;
@@ -863,8 +855,7 @@ button {
                     .dot {
                         &::before {
                             z-index: 1;
-                            top: 9px;
-                            left: 5px;
+                            top: 8px;
                             height: 11px;
                             width: 11px;
                         }
