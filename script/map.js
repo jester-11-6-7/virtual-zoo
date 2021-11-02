@@ -28,7 +28,7 @@ function animalCardFn(name) {
             CARD[i].classList.add('show__card')
         }
     }
-};
+}
 
 // sliderFn
 function sliderFn() {
@@ -44,7 +44,7 @@ function sliderFn() {
             if ((sliderChildren[0].offsetWidth * i) + (sliderChildrenGap * (i - 1)) === slider.offsetWidth) {
                 row = i
             }
-        };
+        }
 
         let sliderElemsWidth = +(direction + sliderChildren[0].offsetWidth),
             sliderContainerGap = +(direction + parseFloat(sliderChildrenGap)),
@@ -57,9 +57,9 @@ function sliderFn() {
 
         if (offset + oneShift < 1 && offset + oneShift >= -sliderWidth) {
             sliderContainer.style.transform = `translateX(${offset += oneShift}px)`
-        };
+        }
     }
-};
+}
 
 !function reviewsSliderFn() {
     const btn = document.querySelector('.testimonials__btn-slider').children,
@@ -124,3 +124,13 @@ function sliderFn() {
         }
     }
 }()();
+
+const zooTranslationAimal = document.querySelectorAll('.zoo-map__card__link')
+
+for (const zooTranslationLink of zooTranslationAimal){
+    zooTranslationLink.addEventListener('click', (e) => {
+        e.preventDefault()
+        sessionStorage.setItem('zooTranslation', zooTranslationLink.dataset.animal)
+        location.href = 'pages/zooTranslation.html'
+    }, false)
+}

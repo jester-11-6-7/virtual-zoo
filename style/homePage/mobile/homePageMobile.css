@@ -652,6 +652,7 @@ button {
   overflow: hidden;
   position: absolute;
   top: 0;
+  z-index: 500;
   -webkit-transition-duration: 0.7s;
           transition-duration: 0.7s;
   left: -388px;
