@@ -1428,7 +1428,7 @@ button {
     stroke: rgba(96, 159, 255, 0.6);
   }
   .layout .main .zoo-map__mob-marker.zoo-map__mob-marker__active rect {
-    stroke: #609FFF;
+    stroke: #609fff;
   }
   .layout .main .zoo-map__mob-marker rect {
     -webkit-transition-duration: 0.3s;

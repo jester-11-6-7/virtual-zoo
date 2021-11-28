@@ -62,7 +62,7 @@ button {
             width: 92px;
             position: absolute;
             z-index: -1;
-            height: 90vh;
+            height: 720px;
             border-right: 2px solid #f0f0f0;
             border-left: 2px solid #f0f0f0;
             border-bottom: 2px solid #f0f0f0;
@@ -120,7 +120,7 @@ button {
         &__profile {
             height: 52px;
             width: 52px;
-            margin-right: 8.5%;
+            margin-right: 87px;
             &:hover svg {
                 circle {
                     transition-duration: $animationSpeed;
@@ -131,6 +131,311 @@ button {
     }
     .main {
         width: 100%;
+        .translation {
+            &__layout {
+                padding-top: 186px;
+                padding-left: 244px;
+                max-width: 1920px;
+                margin: auto;
+                display: grid;
+                grid-template-columns: 1064px max-content;
+                grid-template-rows: 110px 489px max-content;
+                column-gap: 40px;
+                grid-auto-flow: row dense;
+            }
+            &__video {
+                width: 1064px;
+                height: 599px;
+                border-radius: 5px;
+                grid-area: 1 / 1 / 2 / 3;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+            &__zoo-account {
+                display: flex;
+                align-items: center;
+                align-content: flex-start;
+                gap: 20px;
+                border-bottom: 1px solid #e3e3e3;
+                padding-bottom: 40px;
+                grid-column: 2/3;
+                grid-row: 1/2;
+                align-self: flex-start;
+            }
+            &__zoo-account-img {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+            }
+            &__zoo-name {
+                font-family: Rubik;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                color: $footerBgColor;
+            }
+            &__views {
+                margin-top: 5px;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                gap: 5px;
+                font-family: Rubik;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                color: $colorText;
+            }
+            &__donate {
+                width: 450px;
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+            &__title {
+                margin-top: 40px;
+                font-family: Merriweather;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 26px;
+                color: $darkBlue;
+                line-height: 145%;
+                width: 420px;
+            }
+            &__cams {
+                grid-column: 1/3;
+                grid-row: 3/4;
+            }
+            &__text {
+                margin-top: 30px;
+                font-size: 18px;
+                line-height: 154%;
+                color: $colorText;
+                width: 336px;
+                font-family: Rubik;
+            }
+            &__btn {
+                display: block;
+                .btn {
+                    border: 2px solid $btnColor;
+                    background-color: $btnColor;
+                    color: white;
+                    margin-top: 40px;
+                    &:hover {
+                        background-color: $darkBlue;
+                        border-color: $darkBlue;
+                    }
+                    &:active {
+                        background-color: $btnBgActive;
+                        border-color: $btnBgActive;
+                    }
+                }
+            }
+            &__cams {
+                margin-top: 60px;
+            }
+            &__cams-title {
+                font-family: Merriweather;
+                font-size: 36px;
+                line-height: 145%;
+                color: $darkBlue;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+            &__slider {
+                margin-top: 40px;
+            }
+            &__slider-bar {
+                display: flex;
+                gap: 40px;
+            }
+            &__cam {
+                background-color: black;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 5px;
+                overflow: hidden;
+                width: 328px;
+                height: 184px;
+                color: white;
+                font-family: $Merriweather;
+                font-style: normal;
+                font-weight: lighter;
+                &:hover {
+                    .translation__cam-viewers {
+                        opacity: 1;
+                    }
+                }
+                &.translation__watch-now {
+                    position: relative;
+                    &::before {
+                        content: "You watch now";
+                        position: absolute;
+                        background-color: rgba($color: #000000, $alpha: 0.5);
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 2;
+                        font-family: $Merriweather;
+                    }
+                    .translation__cam-viewers {
+                        opacity: 0;
+                    }
+                }
+                button {
+                    display: block;
+                    padding-top: 10px;
+                    color: white;
+                    font-family: $Merriweather;
+                }
+                .translation__cam-viewers {
+                    transition-duration: 0.4s;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba($color: #000000, $alpha: 0.5);
+                    opacity: 0;
+                }
+                .translation__cam-viewers__quantities {
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid white;
+                }
+            }
+            &__btns {
+                margin-top: 40px;
+                .btn-slider {
+                    background-color: $btnSliderColorDark;
+                }
+            }
+        }
+        .facts {
+            &__layout {
+                width: 1432px;
+                margin: auto;
+            }
+            &__title {
+                margin-top: 40px;
+                font-family: $Merriweather;
+                font-size: 36px;
+                line-height: 145%;
+                color: $darkBlue;
+            }
+            &__text {
+                margin-top: 30px;
+                font-size: 18px;
+                line-height: 154%;
+                color: $colorText;
+                font-family: $Rubik;
+                width: 512px;
+            }
+            &__information {
+                border-bottom: 1px solid #d3d3d3;
+                transition-duration: 0.5s;
+                &[open] {
+                    border-color: #609fff;
+                    .facts__information-title {
+                        color: #609fff;
+                        &::before {
+                            content: "-";
+                        }
+                    }
+                    .facts__information-text {
+                        animation: spoiler 1s;
+                    }
+                }
+            }
+
+            &__information-title {
+                padding: 25px 0;
+                font-family: $Rubik;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 26px;
+                color: $darkBlue;
+                display: flex;
+                justify-content: space-between;
+                transition-duration: 0.5s;
+                position: relative;
+                cursor: pointer;
+                &::before {
+                    content: "+";
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            &__information-text {
+                padding-bottom: 30px;
+                color: $colorText;
+                font-size: 18px;
+                font-family: $Rubik;
+                line-height: 154%;
+                overflow: hidden;
+                padding-right: 51px;
+            }
+
+            @keyframes spoiler {
+                0% {
+                    max-height: 0;
+                }
+                100% {
+                    max-height: 800px;
+                }
+            }
+        }
+        .pay-and-feed {
+            padding: 100px 0 136px 0;
+            &__layout {
+                display: flex;
+                flex-direction: column;
+                padding-left: 244px;
+                max-width: 1920px;
+                margin: auto;
+            }
+            &__title {
+                padding-bottom: 0;
+                padding-left: 184px;
+            }
+            &__box {
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                align-items: center;
+                max-width: 824px;
+                justify-content: space-between;
+                &:nth-of-type(1) {
+                    margin: 85px 0 0 201px;
+                    &::after {
+                        content: url(../../../assets/img/arrow_1.png);
+                        left: 57%;
+                        position: absolute;
+                        bottom: -85px;
+                    }
+                }
+                &:nth-of-type(2) {
+                    margin: 129px 0 0 751px;
+                    &::before {
+                        content: url(../../../assets/img/arrow_2.png);
+                        left: -35%;
+                        position: absolute;
+                        top: 50%;
+                    }
+                }
+                &:nth-of-type(3) {
+                    margin: 129px 0 0 16px;
+                }
+            }
+            &__content {
+                max-width: 450px;
+            }
+        }
     }
     .footer {
         padding: $paddingLayout;
@@ -234,6 +539,20 @@ button {
     font-family: $Rubik;
 }
 
+.btn-slider {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-btn-box {
+    display: flex;
+    gap: 20px;
+}
+
 .title {
     color: $titleColor;
     font-size: 26px;
@@ -264,6 +583,10 @@ button {
     }
 }
 
+.animal-pages {
+    display: block;
+}
+
 .desctop-hidden {
     display: none;
 }
@@ -271,18 +594,23 @@ button {
 @media screen and (min-width: 1200px) and (max-width: 1919px) {
     $headerWidth: 70px;
     $paddingLayout: 40px;
+
     .layout {
         .header {
             padding: 0 $paddingLayout;
             &__soc__media {
                 width: 72px;
-                height: 90vh;
-                // height: 60px;
+                height: auto;
+                padding-top: 70px;
                 .soc__media__links {
-                    gap: 45px;
+                    gap: 30px;
                 }
-                // &.open {
-                // }
+                .soc__media__closed__btn {
+                    svg {
+                        width: 66px;
+                        height: 66px;
+                    }
+                }
             }
             &__nav {
                 width: 1120px;
@@ -312,6 +640,185 @@ button {
             }
         }
         .main {
+            .translation {
+                &__layout {
+                    padding-top: 186px;
+                    padding-left: 184px;
+                    width: 1200px;
+                    margin: auto;
+                    display: grid;
+                    grid-template-columns: 545px max-content;
+                    grid-template-rows: 54px 253px max-content;
+                    column-gap: 40px;
+                    grid-auto-flow: row dense;
+                }
+                &__video {
+                    width: 545px;
+                    height: 307px;
+                    grid-area: 1 / 1 / 2 / 3;
+                }
+                &__zoo-account {
+                    gap: 28px;
+                    border-bottom: none;
+                    padding-bottom: 0px;
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                }
+                &__zoo-account-img {
+                    width: 54px;
+                    height: 54px;
+                }
+                &__zoo-name {
+                    font-size: 20px;
+                    font-family: Rubik;
+                    font-style: normal;
+                    font-weight: normal;
+                    color: $footerBgColor;
+                }
+                &__views {
+                    font-size: 16px;
+                }
+                &__donate {
+                    width: 355px;
+                }
+                &__title {
+                    margin-top: 25px;
+                    font-size: 22px;
+                    width: 343px;
+                }
+                &__text {
+                    margin-top: 15px;
+                    font-size: 18px;
+                    width: 336px;
+                }
+                &__btn {
+                    .btn {
+                        margin-top: 15px;
+                    }
+                }
+                &__cams {
+                    margin-top: 50px;
+                }
+                &__cams-title {
+                    font-size: 22px;
+                }
+                &__slider {
+                    margin-top: 30px;
+                    width: 831px;
+                    overflow: hidden;
+                }
+                &__slider-bar {
+                    display: flex;
+                    flex-shrink: 0;
+                    width: max-content;
+                    gap: 30px;
+                }
+                &__cam {
+                    border-radius: 5px;
+                    width: 257px;
+                    height: 144px;
+                }
+                // &__btns {
+                //     margin-top: 40px;
+                //     .btn-slider {
+                //         background-color: $btnSliderColorDark;
+                //     }
+                // }
+            }
+            .facts {
+                &__layout {
+                    padding-left: 184px;
+                    padding-right: 50px;
+                    width: 1200px;
+                    margin: auto;
+                }
+                &__title {
+                    margin-top: 80px;
+                    font-size: 36px;
+                }
+                &__text {
+                    // margin-top: 30px;
+                    margin-bottom: 35px;
+                    font-size: 16px;
+                    width: 512px;
+                }
+                // &__information {
+                //     border-bottom: 1px solid #d3d3d3;
+                //     transition-duration: 0.5s;
+                //     &[open] {
+                //         border-color: #609fff;
+                //         .facts__information-title {
+                //             color: #609fff;
+                //             &::before {
+                //                 content: "-";
+                //             }
+                //         }
+                //         .facts__information-text {
+                //             animation: spoiler 1s;
+                //         }
+                //     }
+                // }
+
+                &__information-title {
+                    font-size: 24px;
+                    padding: 25px 0;
+                    // &::before {
+                    //     content: "+";
+                    //     position: absolute;
+                    //     right: 0;
+                    //     top: 50%;
+                    //     transform: translateY(-50%);
+                    // }
+                }
+                &__information-text {
+                    padding-bottom: 30px;
+                    font-size: 16px;
+                    padding-right: 5px;
+                }
+            }
+            .pay-and-feed {
+                padding: 100px 0 164px 0;
+                &__layout {
+                    padding-left: 0;
+                    max-width: 1200px;
+                    padding-left: 184px;
+                }
+                &__title {
+                    padding-bottom: 0;
+                    padding-left: 0;
+                    margin-bottom: 120px;
+                }
+                &__subtitle {
+                    width: 287px;
+                    margin-bottom: 20px;
+                }
+                &__img {
+                    width: 219px;
+                }
+                &__box {
+                    max-width: 753px;
+                    margin-top: 0;
+                    &:nth-of-type(1) {
+                        margin: 0;
+                        margin-left: 157px;
+                        &::after {
+                            content: "";
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        margin: 130px 0 0 157px;
+                        &::before {
+                            content: "";
+                        }
+                    }
+                    &:nth-of-type(3) {
+                        margin: 130px 0 0 157px;
+                    }
+                }
+                &__content {
+                    max-width: 456px;
+                }
+            }
         }
         .footer {
             &__layout {
@@ -347,6 +854,10 @@ button {
             }
         }
     }
+    .animal-pages {
+        width: 45px;
+        height: 45px;
+    }
     .text {
         font-size: 16px;
     }
@@ -360,5 +871,9 @@ button {
     }
     .title {
         font-size: 22px;
+    }
+    .btn-slider {
+        width: 56px;
+        height: 56px;
     }
 }

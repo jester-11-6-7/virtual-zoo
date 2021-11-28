@@ -793,7 +793,7 @@ button {
     gap: 20px;
 }
 
-.zoo-map__animal-marks-mobile{
+.zoo-map__animal-marks-mobile {
     display: none;
 }
 
@@ -1092,52 +1092,52 @@ button {
                     align-items: center;
                     gap: 25px;
                 }
-                &__slider-btn{
+                &__slider-btn {
                     width: 20px;
                     display: flex;
                     align-items: center;
-                    &:nth-of-type(2){
+                    &:nth-of-type(2) {
                         justify-content: flex-end;
                     }
-                    &:nth-of-type(1){
+                    &:nth-of-type(1) {
                         justify-content: flex-start;
                     }
                 }
-                &__animal-card{
+                &__animal-card {
                     margin-top: 60px;
                 }
                 &__animal-map {
                     display: none;
                 }
-                &__animal-marks-mobile{
+                &__animal-marks-mobile {
                     margin-top: 405px;
                     max-width: 300px;
-                    display: flex; 
+                    display: flex;
                     margin-bottom: 60px;
                 }
-                &__mob-marker{
+                &__mob-marker {
                     display: block;
                     cursor: pointer;
-                    &:hover{
-                        rect{
-                            stroke:rgba($color: #609FFF, $alpha: 0.6);
+                    &:hover {
+                        rect {
+                            stroke: rgba($color: #609fff, $alpha: 0.6);
                         }
                     }
-                    &.zoo-map__mob-marker__active{
-                        rect{
-                            stroke:#609FFF;
+                    &.zoo-map__mob-marker__active {
+                        rect {
+                            stroke: #609fff;
                         }
                     }
-                    rect{
+                    rect {
                         transition-duration: $animationSpeed;
                     }
                 }
-                &__slider-bar{
-                    display: flex; 
+                &__slider-bar {
+                    display: flex;
                     gap: 20px;
                 }
             }
-        } 
+        }
         .footer {
             padding: 0 $paddingLayout;
             width: 100%;
@@ -1224,7 +1224,7 @@ button {
     .text {
         font-size: 14px;
     }
-    .zoo-map__animal-card-mobile{
+    .zoo-map__animal-card-mobile {
         display: block;
     }
 }
