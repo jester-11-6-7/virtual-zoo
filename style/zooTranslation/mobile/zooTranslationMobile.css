@@ -361,6 +361,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   z-index: 2;
+  font-size: 0.7rem;
   font-family: "Merriweather", serif;
 }
 
@@ -834,10 +835,6 @@ button {
   display: none;
 }
 
-.zoo-map__animal-marks-mobile {
-  display: none;
-}
-
 @media screen and (max-width: 639px) {
   .layout {
     width: 100%;
@@ -854,51 +851,14 @@ button {
     top: calc(-100vh + 61px);
   }
   .layout .header__soc__media {
-    display: block;
-    position: absolute;
-    top: calc(100vh - 100px);
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    z-index: -2;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    background-color: white;
     width: 300px;
     height: 75px;
-    -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-    border-radius: 15px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    overflow: hidden;
-  }
-  .layout .header__soc__media .mobile-hidden {
-    display: block;
+    top: calc(100vh - 85px);
   }
   .layout .header__soc__media .soc__media__links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
     gap: 20px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .layout .header__soc__media .soc__media__links .svg-icon-hover svg {
-    width: 45px;
-    height: 45px;
   }
   .layout .header__soc__media .slider__soc_media {
-    overflow: hidden;
     width: 240px;
   }
   .layout .header__soc__media .soc__media__closed__btn {
@@ -941,7 +901,7 @@ button {
             order: -9;
   }
   .layout .main .translation__zoo-account {
-    gap: 20px;
+    gap: 15px;
     -webkit-box-ordinal-group: -9;
         -ms-flex-order: -10;
             order: -10;
@@ -958,17 +918,15 @@ button {
     gap: 5px;
     font-size: 12px;
   }
+  .layout .main .translation__views img {
+    width: 12px;
+  }
   .layout .main .translation__donate {
     max-width: 300px;
   }
   .layout .main .translation__title {
     margin-top: 30px;
-    font-family: Merriweather;
-    font-style: normal;
-    font-weight: bold;
     font-size: 20px;
-    color: #080029;
-    line-height: 145%;
     padding-right: 120px;
   }
   .layout .main .translation__cams {
@@ -981,38 +939,13 @@ button {
     margin-top: 20px;
     font-size: 14px;
     width: 300px;
-    font-family: Rubik;
     padding-right: 20px;
   }
-  .layout .main .translation__btn {
-    display: block;
-  }
   .layout .main .translation__btn .btn {
-    border: 2px solid #0f0049;
-    background-color: #0f0049;
-    color: white;
-    margin-top: 30px;
     font-size: 14px;
   }
-  .layout .main .translation__btn .btn:hover {
-    background-color: #080029;
-    border-color: #080029;
-  }
-  .layout .main .translation__btn .btn:active {
-    background-color: #150068;
-    border-color: #150068;
-  }
   .layout .main .translation__cams-title {
-    font-family: Merriweather;
     font-size: 20px;
-    line-height: 145%;
-    color: #080029;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     gap: 12px;
     margin-top: 0px;
   }
@@ -1020,86 +953,17 @@ button {
     margin-top: 20px;
   }
   .layout .main .translation__slider-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 20px;
   }
   .layout .main .translation__cam {
-    background-color: black;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 5px;
-    overflow: hidden;
-    width: 141px;
+    width: 140px;
     height: 80px;
-    color: white;
-    font-family: "Merriweather", serif;
-    font-style: normal;
-    font-weight: lighter;
-  }
-  .layout .main .translation__cam:hover .translation__cam-viewers {
-    opacity: 1;
-  }
-  .layout .main .translation__cam.translation__watch-now {
-    position: relative;
-  }
-  .layout .main .translation__cam.translation__watch-now::before {
-    content: "You watch now";
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    z-index: 2;
-    font-family: "Merriweather", serif;
-  }
-  .layout .main .translation__cam.translation__watch-now .translation__cam-viewers {
-    opacity: 0;
-  }
-  .layout .main .translation__cam button {
-    display: block;
-    padding-top: 10px;
-    color: white;
-    font-family: "Merriweather", serif;
-  }
-  .layout .main .translation__cam .translation__cam-viewers {
-    -webkit-transition-duration: 0.4s;
-            transition-duration: 0.4s;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-  }
-  .layout .main .translation__cam .translation__cam-viewers__quantities {
-    padding-bottom: 5px;
-    border-bottom: 1px solid white;
   }
   .layout .main .translation__btns {
     margin-top: 40px;
@@ -1113,19 +977,13 @@ button {
   }
   .layout .main .facts__title {
     margin-top: 70px;
-    font-family: "Merriweather", serif;
     font-size: 26px;
-    line-height: 145%;
-    color: #080029;
   }
   .layout .main .facts__text {
     margin-top: 20px;
     font-size: 14px;
-    line-height: 154%;
-    color: #747474;
-    font-family: "Rubik", sans-serif;
     width: auto;
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
   .layout .main .facts__information {
     border-bottom: 1px solid #d3d3d3;
@@ -1150,19 +1008,12 @@ button {
     font-size: 18px;
   }
   .layout .main .facts__information-title::before {
-    content: "+";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    font-size: 35px;
+    font-weight: lighter;
   }
   .layout .main .facts__information-text {
     padding-bottom: 30px;
-    color: #747474;
-    font-size: 16px;
-    font-family: "Rubik", sans-serif;
-    line-height: 154%;
+    font-size: 14px;
     overflow: hidden;
     padding-right: 51px;
   }
@@ -1186,51 +1037,18 @@ button {
     padding: 60px 0 60px 0;
   }
   .layout .main .pay-and-feed__layout {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-left: 0;
     max-width: 294px;
-    margin: auto;
   }
   .layout .main .pay-and-feed__img {
     width: 160px;
   }
   .layout .main .pay-and-feed__subtitle {
     margin: 40px 0 20px 0;
-    padding: 0 40px;
+    padding: 0 10px;
+    text-align: center;
   }
   .layout .main .pay-and-feed__title {
-    padding-bottom: 0;
-    padding-left: 0;
-    text-align: center;
     margin-bottom: 60px;
-  }
-  .layout .main .pay-and-feed__text {
-    text-align: center;
-  }
-  .layout .main .pay-and-feed__box {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    position: relative;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    max-width: 824px;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
   .layout .main .pay-and-feed__box:not(:nth-of-type(1)) {
     margin-top: 50px;
@@ -1317,6 +1135,7 @@ button {
         -ms-flex-direction: column;
             flex-direction: column;
     font-size: 11px;
+    padding: 20px 0 100px 0;
   }
   .btn {
     font-size: 14px;
@@ -1331,9 +1150,6 @@ button {
   }
   .text {
     font-size: 14px;
-  }
-  .zoo-map__animal-card-mobile {
-    display: block;
   }
 }
 /*# sourceMappingURL=zooTranslationMobile.css.map */

@@ -273,6 +273,7 @@ button {
                         justify-content: center;
                         align-items: center;
                         z-index: 2;
+                        font-size: 0.7rem;
                         font-family: $Merriweather;
                     }
                     .translation__cam-viewers {
@@ -617,10 +618,6 @@ button {
     display: none;
 }
 
-.zoo-map__animal-marks-mobile {
-    display: none;
-}
-
 @media screen and(max-width: 639px) {
     $paddingLayout: 10px;
     $headerWidth: 59px;
@@ -641,38 +638,13 @@ button {
                 top: calc(-100vh + 61px);
             }
             &__soc__media {
-                display: block;
-                position: absolute;
-                top: calc(100vh - 100px);
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: -2;
-                display: flex;
-                background-color: white;
                 width: 300px;
                 height: 75px;
-                box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-                border-radius: 15px;
-                justify-content: space-between;
-                align-items: center;
-                overflow: hidden;
-                .mobile-hidden {
-                    display: block;
-                }
+                top: calc(100vh - 85px);
                 .soc__media__links {
-                    display: flex;
-                    width: max-content;
                     gap: 20px;
-                    justify-content: space-between;
-                    .svg-icon-hover {
-                        svg {
-                            width: 45px;
-                            height: 45px;
-                        }
-                    }
                 }
                 .slider__soc_media {
-                    overflow: hidden;
                     width: 240px;
                 }
                 .soc__media__closed__btn {
@@ -703,7 +675,7 @@ button {
                     order: -9;
                 }
                 &__zoo-account {
-                    gap: 20px;
+                    gap: 15px;
                     order: -10;
                 }
                 &__zoo-account-img {
@@ -717,18 +689,16 @@ button {
                     margin-top: 3px;
                     gap: 5px;
                     font-size: 12px;
+                    img {
+                        width: 12px;
+                    }
                 }
                 &__donate {
                     max-width: 300px;
                 }
                 &__title {
                     margin-top: 30px;
-                    font-family: Merriweather;
-                    font-style: normal;
-                    font-weight: bold;
                     font-size: 20px;
-                    color: $darkBlue;
-                    line-height: 145%;
                     padding-right: 120px;
                 }
                 &__cams {
@@ -739,34 +709,15 @@ button {
                     margin-top: 20px;
                     font-size: 14px;
                     width: 300px;
-                    font-family: Rubik;
                     padding-right: 20px;
                 }
                 &__btn {
-                    display: block;
                     .btn {
-                        border: 2px solid $btnColor;
-                        background-color: $btnColor;
-                        color: white;
-                        margin-top: 30px;
                         font-size: 14px;
-                        &:hover {
-                            background-color: $darkBlue;
-                            border-color: $darkBlue;
-                        }
-                        &:active {
-                            background-color: $btnBgActive;
-                            border-color: $btnBgActive;
-                        }
                     }
                 }
                 &__cams-title {
-                    font-family: Merriweather;
                     font-size: 20px;
-                    line-height: 145%;
-                    color: $darkBlue;
-                    display: flex;
-                    align-items: center;
                     gap: 12px;
                     margin-top: 0px;
                 }
@@ -774,67 +725,13 @@ button {
                     margin-top: 20px;
                 }
                 &__slider-bar {
-                    display: flex;
                     flex-direction: row;
+                    flex-wrap: wrap;
                     gap: 20px;
                 }
                 &__cam {
-                    background-color: black;
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    border-radius: 5px;
-                    overflow: hidden;
-                    width: 141px;
+                    width: 140px;
                     height: 80px;
-                    color: white;
-                    font-family: $Merriweather;
-                    font-style: normal;
-                    font-weight: lighter;
-                    &:hover {
-                        .translation__cam-viewers {
-                            opacity: 1;
-                        }
-                    }
-                    &.translation__watch-now {
-                        position: relative;
-                        &::before {
-                            content: "You watch now";
-                            position: absolute;
-                            background-color: rgba($color: #000000, $alpha: 0.5);
-                            width: 100%;
-                            height: 100%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            z-index: 2;
-                            font-family: $Merriweather;
-                        }
-                        .translation__cam-viewers {
-                            opacity: 0;
-                        }
-                    }
-                    button {
-                        display: block;
-                        padding-top: 10px;
-                        color: white;
-                        font-family: $Merriweather;
-                    }
-                    .translation__cam-viewers {
-                        transition-duration: 0.4s;
-                        display: flex;
-                        align-items: center;
-                        flex-direction: column;
-                        justify-content: center;
-                        height: 100%;
-                        width: 100%;
-                        background-color: rgba($color: #000000, $alpha: 0.5);
-                        opacity: 0;
-                    }
-                    .translation__cam-viewers__quantities {
-                        padding-bottom: 5px;
-                        border-bottom: 1px solid white;
-                    }
                 }
                 &__btns {
                     margin-top: 40px;
@@ -850,19 +747,13 @@ button {
                 }
                 &__title {
                     margin-top: 70px;
-                    font-family: $Merriweather;
                     font-size: 26px;
-                    line-height: 145%;
-                    color: $darkBlue;
                 }
                 &__text {
                     margin-top: 20px;
                     font-size: 14px;
-                    line-height: 154%;
-                    color: $colorText;
-                    font-family: $Rubik;
                     width: auto;
-                    margin-bottom: 50px;
+                    margin-bottom: 35px;
                 }
                 &__information {
                     border-bottom: 1px solid #d3d3d3;
@@ -885,19 +776,13 @@ button {
                     padding: 20px 0;
                     font-size: 18px;
                     &::before {
-                        content: "+";
-                        position: absolute;
-                        right: 0;
-                        top: 50%;
-                        transform: translateY(-50%);
+                        font-size: 35px;
+                        font-weight: lighter;
                     }
                 }
                 &__information-text {
                     padding-bottom: 30px;
-                    color: $colorText;
-                    font-size: 16px;
-                    font-family: $Rubik;
-                    line-height: 154%;
+                    font-size: 14px;
                     overflow: hidden;
                     padding-right: 51px;
                 }
@@ -914,36 +799,20 @@ button {
             .pay-and-feed {
                 padding: 60px 0 60px 0;
                 &__layout {
-                    display: flex;
-                    flex-direction: column;
-                    padding-left: 0;
                     max-width: 294px;
-                    margin: auto;
                 }
                 &__img {
                     width: 160px;
                 }
                 &__subtitle {
                     margin: 40px 0 20px 0;
-                    padding: 0 40px;
+                    padding: 0 10px;
+                    text-align: center;
                 }
                 &__title {
-                    padding-bottom: 0;
-                    padding-left: 0;
-                    text-align: center;
                     margin-bottom: 60px;
                 }
-                &__text {
-                    text-align: center;
-                }
                 &__box {
-                    display: flex;
-                    flex-direction: row;
-                    position: relative;
-                    align-items: center;
-                    max-width: 824px;
-                    flex-direction: column;
-                    justify-content: space-between;
                     &:not(:nth-of-type(1)) {
                         margin-top: 50px;
                     }
@@ -1020,6 +889,7 @@ button {
                 gap: 8px;
                 flex-direction: column;
                 font-size: 11px;
+                padding: 20px 0 100px 0;
             }
         }
     }
@@ -1038,8 +908,5 @@ button {
 
     .text {
         font-size: 14px;
-    }
-    .zoo-map__animal-card-mobile {
-        display: block;
     }
 }
