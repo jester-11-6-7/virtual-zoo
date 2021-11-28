@@ -934,6 +934,7 @@ button {
     -webkit-box-ordinal-group: -7;
         -ms-flex-order: -8;
             order: -8;
+    max-width: 300px;
   }
   .layout .main .translation__text {
     margin-top: 20px;
